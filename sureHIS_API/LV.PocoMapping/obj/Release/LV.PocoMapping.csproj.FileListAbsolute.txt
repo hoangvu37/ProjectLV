@@ -1,0 +1,15 @@
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.PocoMapping.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.PocoMapping.dll
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Release\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Release\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Release\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Release\LV.PocoMapping.pdb

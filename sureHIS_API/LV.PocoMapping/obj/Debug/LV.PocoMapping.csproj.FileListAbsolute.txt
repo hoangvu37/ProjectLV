@@ -1,0 +1,61 @@
+F:\Work\SureHIS\LV.PocoMapping\obj\Debug\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\SureHIS\LV.PocoMapping\Debug\LV.PocoMapping.dll
+F:\Work\SureHIS\LV.PocoMapping\Debug\LV.PocoMapping.pdb
+F:\Work\SureHIS\LV.PocoMapping\Debug\ClosedXML.dll
+F:\Work\SureHIS\LV.PocoMapping\Debug\DocumentFormat.OpenXml.dll
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.dll
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.SqlServer.dll
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.SqlServer.pdb
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.SqlServer.xml
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.pdb
+F:\Work\SureHIS\LV.PocoMapping\Debug\EntityFramework.xml
+F:\Work\SureHIS\LV.PocoMapping\Debug\ClosedXML.xml
+F:\Work\SureHIS\LV.PocoMapping\obj\Debug\LV.PocoMapping.dll
+F:\Work\SureHIS\LV.PocoMapping\obj\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\ClosedXML.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\DocumentFormat.OpenXml.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\Debug\ClosedXML.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\ClosedXML.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\DocumentFormat.OpenXml.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\Vse.Web.Serialization.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.SqlServer.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\EntityFramework.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\ClosedXML.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\Debug\Vse.Web.Serialization.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.PocoMapping\obj\Debug\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\ClosedXML.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\DocumentFormat.OpenXml.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\EntityFramework.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\EntityFramework.SqlServer.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\Vse.Web.Serialization.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\EntityFramework.SqlServer.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\EntityFramework.SqlServer.xml
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\EntityFramework.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\ClosedXML.xml
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\Debug\Vse.Web.Serialization.pdb
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Debug\LV.PocoMapping.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Debug\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\LV.PocoMapping\obj\Debug\LV.PocoMapping.pdb

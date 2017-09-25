@@ -1,0 +1,10 @@
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\EntityFramework.SqlServer.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\EntityFramework.SqlServer.pdb
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\EntityFramework.SqlServer.xml
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\EntityFramework.SqlServer.dll.CodeAnalysisLog.xml
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\EntityFramework.SqlServer.dll.lastcodeanalysissucceeded
+F:\Work\APITeam\sureHIS_API\EntityFramework.SqlServer\obj\Release\EntityFramework.SqlServer.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\EntityFramework.SqlServer\obj\Release\System.Data.Entity.SqlServer.Properties.Resources.SqlServer.resources
+F:\Work\APITeam\sureHIS_API\EntityFramework.SqlServer\obj\Release\EntityFramework.SqlServer.csproj.GenerateResource.Cache
+F:\Work\APITeam\sureHIS_API\EntityFramework.SqlServer\obj\Release\EntityFramework.SqlServer.dll
+F:\Work\APITeam\sureHIS_API\EntityFramework.SqlServer\obj\Release\EntityFramework.SqlServer.pdb

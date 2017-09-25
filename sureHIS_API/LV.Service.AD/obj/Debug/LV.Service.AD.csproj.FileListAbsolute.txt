@@ -1,0 +1,157 @@
+F:\Work\SureHIS\LV.Service.AD\obj\Debug\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.AD.dll.config
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.AD.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.AD.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\ClosedXML.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\EntityFramework.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Common.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Poco.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.PocoMapping.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.Common.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Newtonsoft.Json.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\System.Net.Http.Formatting.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\System.Web.Http.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Owin.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.Owin.dll
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\EntityFramework.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\EntityFramework.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Common.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Common.dll.config
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.PocoMapping.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Poco.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Poco.dll.config
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.Common.pdb
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\LV.Service.Common.dll.config
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\ClosedXML.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Newtonsoft.Json.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\System.Web.Http.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.xml
+F:\Work\SureHIS\LV.Service.AD\bin\Debug\Microsoft.Owin.xml
+F:\Work\SureHIS\LV.Service.AD\obj\Debug\LV.Service.AD.dll
+F:\Work\SureHIS\LV.Service.AD\obj\Debug\LV.Service.AD.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\ClosedXML.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Newtonsoft.Json.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\System.Web.Http.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Owin.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\ClosedXML.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\System.Web.Http.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.xml
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.AD.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\ClosedXML.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.PocoMapping.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Newtonsoft.Json.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\System.Web.Http.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Vse.Web.Serialization.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Owin.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Common.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.PocoMapping.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Poco.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\LV.Service.Common.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\ClosedXML.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\System.Web.Http.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Vse.Web.Serialization.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\EntityFramework.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.xml
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Debug\LV.Service.AD.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.AD.dll.config
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.AD.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.AD.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\ClosedXML.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\DocumentFormat.OpenXml.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Common.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Poco.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.PocoMapping.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.Common.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Newtonsoft.Json.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\System.Web.Http.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Vse.Web.Serialization.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\EntityFramework.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.Owin.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Owin.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Common.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Common.dll.config
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Core.DAL.Base.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Core.DAL.EntityFramework.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.PocoMapping.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Poco.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Poco.dll.config
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.Common.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\LV.Service.Common.dll.config
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\ClosedXML.xml
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\System.Web.Http.xml
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Vse.Web.Serialization.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\EntityFramework.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\EntityFramework.xml
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.Owin.xml
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\bin\Debug\Microsoft.Owin.Security.xml
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.AD.dll.config
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.AD.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.AD.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\obj\Debug\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\obj\Debug\LV.Service.AD.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.AD\obj\Debug\LV.Service.AD.pdb

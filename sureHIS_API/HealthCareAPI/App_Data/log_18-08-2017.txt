@@ -1,0 +1,9 @@
+
+ ************* 2017-08-18 20:12:59,570 [52] ERROR HealthCareAPI.Controllers.EmployeeController **************  
+GetEmployeeById HealthCareAPI.Controllers.EmployeeController.GetEmployeeById 37 A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. Cannot get a local application data path. Most probably a user profile is not loaded. If LocalDB is executed under IIS, make sure that profile loading is enabled for the current user.
+) 
+ 
+ ************* 2017-08-18 20:15:13,407 [58] ERROR HealthCareAPI.Controllers.EmployeeController **************  
+GetEmployeeById HealthCareAPI.Controllers.EmployeeController.GetEmployeeById 37 A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 50 - Local Database Runtime error occurred. Cannot get a local application data path. Most probably a user profile is not loaded. If LocalDB is executed under IIS, make sure that profile loading is enabled for the current user.
+) 
+ 

@@ -1,0 +1,7 @@
+
+ ************* 2017-08-22 14:36:28,659 [13] ERROR HealthCareAPI.Controllers.UserAccountController **************  
+RegisterAccount HealthCareAPI.Controllers.UserAccountController.RegisterAccount 83 Column 'EmailAddress' does not belong to table Table. 
+ 
+ ************* 2017-08-22 15:34:28,996 [9] ERROR HealthCareAPI.Controllers.UserAccountController **************  
+RegisterAccount HealthCareAPI.Controllers.UserAccountController.RegisterAccount 96 Failed to convert parameter value from a String to a DateTime. 
+ 

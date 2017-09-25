@@ -1,0 +1,2290 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HealthCareAPI</name>
+    </assembly>
+    <members>
+        <member name="M:HealthCareAPI.SwaggerConfig.Register">
+            <summary>
+            Config Swaager
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:HealthCareAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:HealthCareAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,HealthCareAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,HealthCareAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:HealthCareAPI.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},HealthCareAPI.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(HealthCareAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,HealthCareAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:HealthCareAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HealthCareAPI.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:HealthCareAPI.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HealthCareAPI.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.ConfigSystemController.AddUpdateRefAppConfig(HealthCareAPI.DTO.AppConfigDTO)">
+            <summary>
+            Cập nhật thông tin cấu hình(bệnh viên, )
+            </summary>
+            <remarks>
+            <code>
+            [{
+                ReturnCode: "" // mã lỗi
+                //0:  Thành công
+                //100: Param JsonAppConfig truyền vào không được phép null
+                //101: không thể cập nhật dữ liệu
+                //102: Lỗi hệ thống không xác định
+            }]
+            </code>
+            </remarks>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.UserAccountController.RegisterAccount(HealthCareAPI.DTO.RegisterAccountDTO)">
+            <summary>
+            Đăng ký tài khoản người dùng
+            </summary>
+            <remarks>
+            <code>
+                [{
+                    ReturnCode: "Mã lỗi của hàm",
+                    //Chú thích về mã lỗi
+                    //60: Email đã được sử dụng
+                    //61: Lỗi của hệ thống không xác định
+                    //62: Các tài khoản khác chưa xứ lý---ko cần thông báo
+                    //63: không tồn tại mã bệnh nhân
+                    //64: sai thông tin FirstName
+                    //65: sai thông tin PersBirthDtm
+                    //66: Bệnh nhân này đã có tài khoản trong hệ thống
+                    //68: sai thông tin LastName
+                    //0: Lưu thông tin đăng ký thành  công
+                    AcocuntID: Mã tài khoản được tạo,
+                }]
+            </code>
+            </remarks>
+            <param name="AccountPer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.UserAccountController.ForgotPassword(System.String,System.String)">
+            <summary>
+            Quên mật khẩu
+            </summary>
+                [{
+                    ReturnCode: "",
+                    //Mã lỗi của hàm
+                    //0: thành công
+                    //90: 
+                }]
+            <param name="EmailAddress">Địa chỉ Email</param>
+            <param name="Url">Link site</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.UserAccountController.ChangePwd(System.String,System.String)">
+            <summary>
+            Thay đổi Pwd
+            </summary>
+            <param name="ForgotPwdCode"></param>
+            <param name="AccountPwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.UserAccountController.ActivedRegisterAccount(System.String)">
+            <summary>
+            Active tài khoản
+            </summary>
+            <param name="ActivationCode">Key Active</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.UserAccountController.GetPersGenderTest">
+            <summary>
+            Lấy dữ liệu giới tính
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.CommonController.GetHosID">
+            <summary>
+            Lấy ID bệnh viện hiện tại
+            </summary>
+            <remarks>
+            <code>
+                [{
+                    HosID:// Mã bệnh viên ,
+                    ApptByProcess: //Quy trình thăm khám ,
+                }]
+            </code>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.CommonController.ExecuteStore(HealthCareAPI.DTO.ExecuteStoreDTO)">
+            <summary>
+            Thực thi store
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging(LV.Common.Request)">
+            <summary>
+            Test pagin server
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetMedicalEncounterByPtId(System.Int64,System.Int64)">
+            <summary>
+            Thông tin nhập viện(Thăm khám, Cấp cứu, Chẩn đoán CLS)
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    HCFEDispDiagICDCode: null,//ID Cha
+                    HCFEDispDispDtm: null, //Mã Function
+                    V_ConsultStatus: null,//Mã ID cấp cha
+                    PreDiagnosis: null,//Tiêu đề
+                    HCFEncEncAdmDtm: null,//Mô tả
+                    HCFEncEncDisDtm: null,
+                    YearEncAdmDtm: null,
+                    isInPtTX: null,
+                    V_EmergencyMedStatus: null,
+                    V_EmergencyMedStatusName: null,
+                    PtBarCode: null,
+                    PtCode: null,
+                    PtQRcode: null,
+                    MedReportBookCode: null,
+                    NationalMedicalCode: null,
+                    PtRecQRCode: null
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="PtId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetParaClinicalReqDetailsByPtId(System.Int64,System.Int64)">
+            <summary>
+            Thông tin sử dụng dịch vụ cận lâm sàng của từng bênh nhân
+            </summary>
+            <param name="AccountID"></param>
+            <param name="PtId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GenPtAdmNo(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Phát sinh mã tiếp nhận
+            </summary>
+            <remarks>
+            <code>
+            [{
+                PtAdmNo: "2017.000001"//mã tiếp nhận
+            }]
+            </code>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="HosID"></param>
+            <param name="IsInPatient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GenPtCode(System.Int64,System.Int64)">
+            <summary>
+            Phát sinh mã số bệnh nhân
+            </summary>
+            <remarks>
+            <code>
+                [{
+                    PtCode: "0840270000000004.78691496"//mã bệnh nhân
+                }]
+            </code>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="HosID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GenMedReportBookCode(System.Int64)">
+            <summary>
+            Phát sinh Mã số Sổ khám bệnh
+            </summary>
+            <remarks>
+            <code>
+            [{
+                MedReportBookCode: "Mã số sổ khám bệnh"
+            }]
+            </code>
+            </remarks>
+            <param name="AccountID">ID tài khoản</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetEmpWorkSchedule(System.Int64,System.Int64,System.String)">
+            <summary>
+            Lấy trạng thái lịch bận/rảnh của bác sĩ theo khung thời gian trong một ngày
+            </summary>
+            <param name="AccountID"></param>
+            <param name="EmpID">Mã nhân viên</param>
+            <param name="Date">Ngày cần lấy</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetEmpWorkCalendar(System.Int64,System.Int64,System.String)">
+            <summary>
+            Lấy lịch bận/rảnh trong một tháng của một nhân viên/Bác sĩ
+            </summary>
+            <param name="AccountID"></param>
+            <param name="EmpID"></param>
+            <param name="Date">1 Ngày trong tháng</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist(System.Int64,System.Int64)">
+            <summary>
+            Danh sách chuyên khoa khám chữa bệnh ngoại trú
+            </summary>
+            <param name="HosID">Mã bệnh viện</param>
+            <param name="DeptID">Mã chuyên khoa</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetAppointmentEmployee(System.Int64,System.Int64)">
+            <summary>
+            Lấy danh sách các nhân viên trong bệnh viên hỗ trợ đăng ký khám chữa bệnh online
+            </summary>
+            <remarks>
+            <code>
+            [{
+                "PersName": "Bá Văn Hoàng Khanh"//Full name,
+                "EmpID": 186 // Mã nhân viên,
+                "HosDeptID": 66 //Mã chuyên khoa,
+                "EmpCode": "EMP-186"//Mã code của nhân viên,
+                "ProfilePhoto": "bvhkhanh.png"//Avatar,
+                "DeptName": "Khoa Tai mũi họng"//Tên chuyên khoa,
+                "AcademicName": null//Tên học vị học hàm,
+                "JTName": "[Certified Nursing Assistant]"//Tên chức danh
+            }]
+            </code>
+            </remarks>
+            <param name="HosID">Mã bệnh viện</param>
+            <param name="DeptID">Mã chuyên khoa</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.RegAppointmentOnline(HealthCareAPI.DTO.AppointmentOnline)">
+            <summary>
+            Đăng ký khám bệnh Online
+            </summary>
+            <remarks>
+            <code>
+            [{
+                ReturnCode: "",//Mã lỗi của hàm
+                //0: thành công
+                //70: Lỗi của hệ thống không xác định
+                //71: Sai thông tin của bệnh nhân
+                //72: Không thể phát sinh hàng đợi
+                //73: Không thể đky kcb
+                //74: Đã bị trùng khung giờ, vui lòng đky lại
+            }]
+            </code>
+            </remarks>
+            <param name="apointOnline"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.CheckScheduleOfEmps(System.String,System.String,System.Int64,System.Int64)">
+            <summary>
+            Kiểm tra khung giờ làm việc có thỏa điểu kiện không?
+            </summary>
+            <param name="Date">Ngày đky khám bênh dd/MM/yyyy</param>
+            <param name="Time">khung giờ đăng ký khám bênh</param>
+            <param name="HosDeptID">Mã Chuyên khoa</param>
+            <param name="HosID">Mã bệnh viện</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetEmpBusySchedule(System.Int64,System.Int64)">
+            <summary>
+            Danh sách lịch bận của các bác sĩ chuyên khoa
+            </summary>
+            <remarks>
+            <code>
+            [{
+                PersName: "Full name của bác sĩ",
+                EmpID: "Mã bác sĩ",
+                HosID: "Mã bệnh viên",
+                DeptID:  "Mã chuyên khoa của bác sĩ",
+                DateOfBusy: //Danh sách ngày bận
+                [{
+                    DateObserved: "Ngày bận của bác sĩ",
+                }]
+            }]
+            </code>
+            </remarks>
+            <param name="HosID">Mã bệnh viện</param>
+            <param name="DeptID">Mã chuyên khoa</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialById(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Lịch làm việc hàng tuần của từng chuyên khoa-Bệnh viện
+            </summary>
+            <remarks>
+            <code>
+            [{
+                "WorkingSked": 1 //Mã lịch làm việc, 
+                "DeptID": null //Mã chuyên khoa,
+                "HosDeptID": null//Mã,
+                "HosID": 1//Mã bệnh viện,
+                "V_DayName": "Chủ Nhật" //Ngày trong tuần,
+                "SID": 4 //Mã ca làm việc,
+                "Notes": "Lịch làm việc và giao dịch của bệnh viện" //Ghi chú,
+                "StartTime": "08:00:00" //Giờ bắt đầu,
+                "EndTime": "12:00:00" //Giờ kết thúc,
+                "ShiftName": "Weekend Shift"//Ca làm việc,
+                "isNotEffect": null//Hiệu lực,
+                "DeptName": null//Tên chuyên khoa
+            }]
+            </code>
+            </remarks>
+            <param name="HosID">Mã bệnh viện</param>
+            <param name="DeptID">Mã chuyên khoa</param>
+            <param name="IsHos">Default true: Lấy lịch làm việ của bệnh viện/ false: lấy lịch làm việc của từng chuyên khoa</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.AppointmentController.GetScheduleSpecialDetails(System.Int64)">
+            <summary>
+            Lịch làm trong tuần của một chuyên khoa (thứ, ca, danh sách nhân viên)
+            </summary>
+            <remarks>
+            <code>
+            [{
+                V_DayName: ""//Thứ trong tuần,
+                JsonDetails: ""//Chi tiết lịch
+            }]
+            </code>
+            </remarks>
+            <param name="DeptID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HealthCareAPI.Controllers.HCPGetController">
+            <summary>
+            Danh mục HCP -  Get
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.HCPGetController.GetListHCProvider(System.String)">
+            <summary>
+            Lấy danh sách bệnh viện / trung tâm y tế
+            </summary>
+            Dữ liệu trả về
+            <remarks>
+            <example> 
+            <code>
+              [
+                     {
+                       "HosID": 13449,
+                       "HCPrvProviderId": "80002",
+                       "HCPrvProviderName": "Ban bảo vệ sức khỏe Long An"
+                     },
+                    {
+                       "HosID": 13448,
+                       "HCPrvProviderId": "80001",
+                       "HCPrvProviderName": "Bệnh viện đa khoa Long An"
+                     },
+                     {
+                       "HosID": 13452,
+                       "HCPrvProviderId": "80211",
+                      "HCPrvProviderName": "Bệnh viện đa khoa tư nhân Long An Segaero"
+                     }
+              ]
+            </code>
+            </example>
+            </remarks>
+            <param name="text">Có thể là tên bệnh viện/ Mã bệnh viện, có đấu hoặc không dấu</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.HCPGetController.GetHCProvider(System.Nullable{System.Int64},System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách bệnh viện
+            </summary>
+            <param name="AccountID"></param>
+            <param name="PageSize"></param>
+            <param name="PageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.HCPGetController.GetHCProviderInfor(System.Int64,System.Int64)">
+             <summary>
+              Lấy thông tin 1 bệnh viện
+             </summary>
+             <remarks>
+             <example> 
+             <code>
+                 [
+                   {  
+                     "HosID": // Mã bệnh viện,
+                     "PHosID": //Mã bệnh viện cấp cha,
+                     "SatOfHosID": //NULL khong la benh vien ve tinh. Nguoc lai benh vien chi dinh se la benh vien ve tinh cua benh vien co ID tuong ung lu trong SatOfHosID. Vi to chuc nay theo co che cua Government Satellite Hospital ,
+                     "HIHosCode": //Ma CSKCB theo quy dinh BH,
+                     "OUID"://Loai to chuc ma HCEnterprise truc thuoc: thuoc he thong cham soc suc khoe y te cua Quoc gia, hay thuoc cac to chuc phi chinh phu,
+                     "HCPrvProviderId":// ASTM Ma benh vien theo quy dinh cua BYT,
+                     "HCPrvProviderName"://ASTM Ten day du cua benh vien/ CSKCB  (HosName),
+                     "ProvinceID": //ID tinh thanh ma benh vien dang truc thuoc (CityProvinceID),
+                     "HosShortName": //Ten viet tat (ngan) cua benh vien.,
+                     "HCPractAddressText"://ASTM Dia chi benh vien (HosAddress),
+                      "HosLogoImgPath"://Logo bệnh viện,
+                     "Slogan": null,
+                     "HosPhone":null,
+                     "HosHotline"://Duong day nong cua benh vien. Co the co nhieu line duong day nong khac nhau. Va luu tru dang string,
+                     "HosWebSite":null,
+                     "HosEmail":null,
+                     "HosFax":null,
+                     "HCPrvProviderTypeCode"://ASTM Loai benh vien (V_HospitalType):  - Theo quy dinh cua VN gom:+ Benh vien da khoa  + Benh vien chuyen khoa: nhi,      + Benh vien chuyen khoa:tai mui hong      + Benh vien chuyen khoa: mat .....  - Theo quy dinh cua ASTM, loai benh vien con chia nho ra nhu:      + Nha khoa: Phuc hinh rang     + Nha khoa: Phong ngua     + Nha khoa: Nhi     + Nha khoa: Noi nha ......   Vi vay can TBC ve du lieu theo ASTM hoac quy dinh cua BYT VN.,
+                     "IsHeadOffice"://1: van phong dai dien,
+                     "HCPrvAgencyIDCode"://ASTM Ma lien ket, ma co quan cung cap ID (TBD),
+                     "IsBuiltIn":// 	- 1: benh vien hay chi nhanh chinh 	- NULL |  0: benh vien hay chi nhanh khac hay co giao dich
+            
+                 }
+               ]
+             </code>
+             </example> 
+             </remarks>
+             <param name="AccountID"></param>
+             <param name="HosID"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPrescriptionDetail(System.Int64,System.Int64)">
+            <summary>
+            Chi tiết toa thuốc của người bệnh(danh sách thuốc trong 1 đơn thuốc)
+            </summary>
+            <remarks>
+            <code>
+                [{
+                    RxsID: //Mã toa thuốc,
+                    RxID: //Mã đơn thuốc,
+                    MedcnID //Mã đợt thăm khám,
+                    MedcnNameText //Tên đợt thăm khám,
+                    DrugFullName //Tên thuốc,
+                    AcPrincipleName //Tên hoạt chất của thuốc,
+                    MedcnDoseQty //Số liều dùng hàng ngày,
+                    MedcnDoseUnitCode //Mã đơn vị liều lượng dùng thuốc,
+                    MedcnAdminFreqCode //Số lần trong ngày,
+                    MedcnAdminFreqPerDay //số ngày chỉ định,
+                    MedcnDispenseQty //Số lượng yêu cầu/Ngày,
+                    MedcnUsingDuration//Thời gian dùng thuốc tính theo đơn vị ngày,
+                    MedcnAdminRouteCode: "Chỉ định cách thức sử dụng như uống/tiêm/ngậm",
+                    MedcnInstructionCode: "Mã hướng dẫn sử dụng dùng thuốc",
+                    MedcnNoteText: "Ghi chú",
+                    BelongingToHI: "NULL/0: thuốc thuộc danh mục BHYT và ngược lại",
+                    InitialICD: "Chẩn đoán ban đầu trước khi chỉ định các dịch vụ CLS",
+                    PreDiagnosis: "Chẩn đoán ban đầu của bác sĩ điều trị",
+                    HCFEncEncounterCode: "Mã chẩn đoán bệnh sau khi có kq CLS",
+                    HCEpiIDCode: "ASTM Mã đợt tiếp nhận ghi thông tin tử vong",
+                    HCFEncReasonVisitCode: "Lý do nhập viên",
+                    IAdmReferralTypeCode: "Mã loại giấy giới thiệu",
+                }]
+            </code>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="RxID">Mã đơn thuốc</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPrescription(System.Int64,System.Int64)">
+            <summary>
+            Lấy danh sách đơn thuốc của bệnh nhân
+            </summary>
+            <remarks>
+            <code>
+                [{
+                    RxID: //Mã đơn thuốc,
+                    RxCode: //Mã Code đơn thuốc,
+                    DiagDesc,
+                    MedEncnID,
+                    MedEnctrDiagID,
+                    MedcnStartDtm,
+                    MedcnStopDtm,
+                    DrAdvice,
+                    ReExamDate,
+                    ApptID,
+                    NeedHoldCnsl,
+                    V_PmtMethod,
+                    V_PmtMethodNameVN,
+                    V_PmtMethodName,
+                    V_PmtStatus,
+                    V_PmtStatusNameVN,
+                    V_PmtStatusName,
+                    V_RxIssueType,
+                    V_RxIssueTypeNameVN,
+                    V_RxIssueTypeName,
+                    V_RxStatus,
+                    V_RxCatg,
+                    CureNum,
+                    IsStabilityStatus,
+                    ApprovedInsurID,
+                    AttendingDoctorID,
+                    NurseID,
+                    InitialICD,
+                    PreDiagnosis,
+                    HCFEncEncounterCode,
+                    HCEpiIDCode,
+                    HCFEncReasonVisitCode,
+                    IAdmReferralTypeCode
+                }]
+            </code>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="PtID">Mã bệnh nhân</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetParaClinicalReq(System.Int64,System.Int64)">
+            <summary>
+            Danh sách yêu cầu chỉ định xét nghiệm cận lâm sàng của bệnh nhân(xét nghiệm, chẩn đoán hình ảnh, thăm dò chức năng)
+            </summary>
+            <remarks>
+            <example>
+            <code>
+                [{
+                    
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="PtID">Mã bệnh nhân</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPatientInfo(System.Int64)">
+            <summary>
+            Lấy thông tin về bệnh nhân KCB 
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    sẽ bổ sung sau
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="PtId">Mã BỆNH NHÂN</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPersonByPtId(System.Int64,System.String)">
+            <summary>
+            Lấy thông tin chung của bệnh nhân
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    sẽ bổ sung sau
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="PtId">ID BỆNH NHÂN</param>
+            <param name="PtCode">Mã BỆNH NHÂN</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPatientInforByType(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy thông tin nhập viện của bệnh nhân
+            </summary>
+            <remarks>
+            Dữ liệu truyền vào
+            <example> 
+            <code>
+                   Input =  'Mã dữ liệu cần truyền vào',
+                   
+                   TypeInput = 0: PtID ,
+                   TypeInput = 1: PtCode,
+                   TypeInput = 2: HICardNo ,
+                  
+                   Type = 0: 'Person',
+                   Type = 1: 'Patient',
+                   Type = 2: 'PatientAdmission' ,
+                   Type = 3: 'HealthInsurance'
+                   Type = 4: 'PatientMedRecord', 
+                   Type = 5: 'MedicalEncounter'
+                   
+            </code>
+            </example>
+            </remarks>
+            <param name="Input">Dữ liệu đầu vào</param>
+            <param name="TypeInput">Loại dữ liệu</param>
+            <param name="Type">Loại data cần lấy </param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetHIAdmissionByAdmID(System.Int64)">
+            <summary>
+            Lấy thông tin hình thức điều chuyển
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    sẽ bổ sung sau
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AdmID">Mã hồ sơ KCB</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetMedicalEncounterByAdmID(System.Int64)">
+            <summary>
+            Lấy thông tin chuẩn đoán y khoa của bệnh nhân
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    sẽ bổ sung sau
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AdmID">Mã hồ sơ KCB</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.Getepr(System.Int64,System.Int64)">
+            <summary>
+            Lấy thông tin chung sổ KCB
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    sẽ bổ sung sau
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AdmID">Mã hồ sơ KCB</param>
+            <param name="PtID">Mã bênh nhân</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetInforPerson(System.Int64,System.Nullable{System.Int64})">
+            <summary>
+            Lấy thông tin Person
+            </summary>
+            <param name="PersonID">Mã PersonID</param>
+            <param name="V_PersonType">Loại người dùng 5200	Nhân Viên///5201	Bênh Nhân//5202	Nhân Viên Y tế Ngoài BV//5203	Người đại diện tổ chức//5204	Người tài trợLoại người dùng trong reflookup có thể Null</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPatientVitalSignInfor(System.Int64)">
+            <summary>
+            Lấy thông tin ngoại chuẩn
+            </summary>
+            <param name="PtComMedRecID">Mã thông tin BN trong sổ khám bệnh</param>
+            <returns>
+            [{
+                "VitSignCode": Mã dấu hiệu ngoại chuẩn,
+                "VitSignDtm": ngày khám,
+                "VitSignQty":kết quả đo,
+                "VitSignUnitCode":đơn vị,
+                "Executor": người đo
+                },
+            ...]
+            </returns> 
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPatientByKey(System.String,System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Danh sách yêu cầu chỉ định xét nghiệm cận lâm sàng của bệnh nhân(xét nghiệm, chẩn đoán hình ảnh, thăm dò chức năng)
+            </summary>
+            <remarks>
+            <example>
+            <code>
+                [{
+                    "PersonID": 1,
+                    "FirstName": "Supervisor",
+                    "MiddleName": "",
+                    "LastName": "Administrator",
+                    "PtCode": null,
+                    "PersGenderName": "Male",
+                    "Age": null,
+                    "AgeOnly": false,
+                    "PersPermanentAddressText": null,
+                    "CountryID": null,
+                    "CountryName": null,
+                    "CityProvinceID": null,
+                    "CityProvinceName": null,
+                    "DistrictID": null,
+                    "DistrictName": null,
+                    "WardID": null,
+                    "WardName": null
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="KeySearch">họ, tên lót hoặc tên bệnh nhân muốn tìm kiếm</param>
+            <param name="PageSize">Số dòng dữ liệu 1 page</param>
+            <param name="PageNumber">Stt page</param>
+            <param name="YearBthDtm">Năm sinh</param>
+            <param name="Phone">Số điện thoại</param>
+            <param name="Mail">mail</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.splitPatientHI(System.String)">
+            <summary>
+            cắt chuỗi QRcode BHYT trả về thông tin BHYT
+            <remarks>
+            <example>
+            <code>
+                [{
+                    "HI": {} //,
+                    "PtCode": string // mã bệnh nhân,
+                    "Err": int // Mã lỗi,
+                //Err = 0 //Thông tin BHYT chính xác
+                //Err = 1 //Mã BHYT không đúng
+                // Err = 2 //Mã BHYT không suy được mức hưởng BH
+                //Err = 3 //Thẻ hết hạn sử dụng!
+                //Err = 4 //Mã nơi đăng ký ban đầu không có trong hệ thống!
+                //Err = 5 //Thẻ QA không đúng format!
+                //Err = 6 //Mã thẻ BHYT không chính xác!
+                }]
+            </code>
+            </example>
+            </remarks>
+            </summary>
+            <param name="ptHI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.SearchPatientFromEPR(HealthCareAPI.DTO.PatientFromEPR)">
+            <summary>
+            Tìm kiếm bệnh nhân từ danh sách bệnh nhân đã có dữ liệu
+            </summary>
+            <remarks>
+            <example>
+            <code>
+                [
+                    {
+                    "PersonID": 385,
+                    "FirstName": null,
+                    "MiddleName": null,
+                    "LastName": null,
+                    "PersName": "tran đinh trọng",
+                    "ProfilePhoto": null,
+                    "PtCode": "0840790000000844.53204135",
+                    "PersGenderCode": 2,
+                    "PersGenderName": "Male",
+                    "Age": 8280,
+                    "AgeOnly": null,
+                    "PersBirthDtm": "1994-06-04T17:00:00",
+                    "PersHomePhonePhN": "0917311305",
+                    "PersPermanentAddressText": "1234444",
+                    "CountryID": null,
+                    "CountryName": null,
+                    "CityProvinceID": "79",
+                    "CityProvinceName": "Hồ Chí Minh",
+                    "DistrictID": "764",
+                    "DistrictName": "Gò Vấp",
+                    "WardID": null,
+                    "WardName": null,
+                    "Total": 1
+                    }
+                ]
+            </code>
+            </example>
+            </remarks>
+            <param name="EPR">Thông tin tìm kiếm</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.SearchPatientFromAppointment(HealthCareAPI.DTO.PatientFromAppointment)">
+            <summary>
+            Tìm kiếm bệnh nhân từ danh sách bệnh nhân đã có dữ liệu
+            </summary>
+            <remarks>
+            <example>
+            <code>
+                [{
+                    "RegInfoID": 179,
+                    "PtID": 179,
+                    "LastName": "Vũ",
+                    "FirstName": "Hoàng",
+                    "PerName": "Hoàng Vũ",
+                    "MobilePhoneNumber": "543543543",
+                    "EmailAddress": "patient@gmail.com",
+                    "DOB": "2014-02-02T00:00:00",
+                    "IDNumber": null,
+                    "PPN": null,
+                    "PersGenderCode": 2,
+                    "PersGenderName": "Male",
+                    "Age": 0,
+                    "AgeOnly": null,
+                    "PersBirthDtm": "2014-02-02T00:00:00",
+                    "IDNumber1": "121111111   ",
+                    "PersPermanentAddressText": "Địa chỉ liên hệ",
+                    "CountryID": null,
+                    "CountryName": null,
+                    "CityProvinceID": "24",
+                    "CityProvinceName": "Bắc Giang",
+                    "DistrictID": "215",
+                    "DistrictName": "Yên Thế",
+                    "WardID": null,
+                    "WardName": null,
+                    "DeptName": null,
+                    "AcademicName": "Director",
+                    "EmpFirstName": null,
+                    "EmpMiddleName": null,
+                    "EmpPersName": "Nguyễn Anh Ngọc",
+                    "StartTime": "13:00:00",
+                    "EndTime": "13:15:00"
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="Appt">Thông tin đầu vào để search</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.PatientController.GetPatientFromAppointment(System.Nullable{System.Int64},System.Nullable{System.Int64})">
+            <summary>
+            Lấy bệnh nhân từ lịch KCB
+            </summary>
+            <remarks>
+            <example>
+            <code>
+                [
+                  {
+                    "RegInfoID": 1,
+                    "LastName": "Lê ",
+                    "FirstName": "Việt",
+                    "PersName": "Lê  Việt",
+                    "PersGenderCode": null,
+                    "PersGenderName": null,
+                    "PersBirthDtm": "1900-01-01T00:00:00",
+                    "IDNo": null,
+                    "PersHomePhonePhN": "+84.905663843",
+                    "EmailAddress": "p010@gmail.com",
+                    "PtId": 330,
+                    "DeptName": "[Khoa Tai mũi họng]",
+                    "AcademicName": null,
+                    "EmpFirstName": "Warner",
+                    "EmpMiddleName": null,
+                    "EmpPersName": "John Warner",
+                    "StartTime": "08:45:00",
+                    "EndTime": "09:00:00"
+                   }
+                ]
+            </code>
+            </example>
+            </remarks>
+            <param name="RegInfoID">ID Lịch KCB</param>
+            <param name="PtID">ID bệnh nhân</param>
+            <returns></returns>
+        </member>
+        <member name="T:HealthCareAPI.Controllers.RADTGetController">
+            <summary>
+            Danh mục RADT -  Get
+            </summary>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetHospitalSpecialist(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Lấy danh sách mã chuyên khoa của bệnh viện
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    "DeptID": 3,
+                   "HosID": 3,
+                   "ModifiedDate": 2017-08-07 11:49:56.523,
+                   "MOHDeptCode":"123",
+                   "DeptName":"Noi Than Kinh",
+                   "HIDeptCode":"123"
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AccountID">ID tài khoản</param>
+            <param name="HosID">Mã Bệnh Viên</param>
+            <param name="IsTotal">Kiểm tra xem có cần trả về tổng bác sĩ không</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetMedicalServiceItem(HealthCareAPI.DTO.GetMedicalServiceItem)">
+            <summary>
+            Lấy dịch vụ trong từng chuyên khoa
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    "DeptID": 3,
+                   "HosID": 3,
+                   "ModifiedDate": 2017-08-07 11:49:56.523,
+                   "MOHDeptCode":"123",
+                   "DeptName":"Noi Than Kinh",
+                   "HIDeptCode":"123"
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetHosFeeTransDetailsByPtId(System.Int64,System.Int64,System.Int32,System.Int32)">
+            <summary>
+             Lấy các dịch vụ khám chữa bệnh đã được lưu dưới database
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                     "HosFeeTransID": NULL,
+                   "EMSID": dich vu y te hay cham soc suc khoe can thanh toan hay chi tra,
+                   "UOMID": Don vi tinh,
+                   .......
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AccountID"></param>
+            <param name="HosFeeTransID"></param> 
+            <param name="PageSize"></param>
+            <param name="PageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetHospitalFeeTransactionByTransID(System.Int64)">
+            <summary>
+            Lấy thông tin chung dịch vụ KCB đã đăng ký
+            </summary>
+            <param name="TransID"> Transaction ID </param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetPatientTransactionByPtID(System.Int64,System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="PtID"></param>
+            <param name="AdmID"></param>
+            <param name="PtCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetPatientClassHistoryByPtId(System.Int64,System.String)">
+            <summary>
+            Lấy Ghi nhan thong tin lich su phan loai benh nhan theo tung benh nhan cu the
+            </summary>
+            <param name="PtID"></param> ID bệnh nhân
+            <param name="PtCode"></param> Mã bệnh nhân
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetEmpAllocation(HealthCareAPI.DTO.EmpAllocation)">
+            <summary>
+            Lấy thông tin bác sĩ trong từng chuyên khoa
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetAppointment(System.Int64,System.Int64)">
+            <summary>
+            Lấy thông tin về đặt lịch hẹn của bệnh nhân
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                     "PtId": 5,
+                   "PtCode": "PT00001",
+                   "ReferHosID": 1,
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="AccountID">ID tài khoản</param>
+            <param name="PtId">Mã BỆNH NHÂN</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetQuotationbyIsNHI(System.Int64,System.Boolean)">
+            <summary>
+            Lấy Mã SerItemsID  để lấy giá BHYT hay DV
+            </summary>
+            <param name="AccountID"></param>
+            <param name="IsNHI"></param> Bang gia dich vu
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.AddUpdateAppointment(HealthCareAPI.DTO.AppointmentDTO)">
+            <summary>
+            Thêm mới và Lưu thông tin tiếp nhận/điều chuyển bệnh nhân
+            </summary>
+            <param name="data">AppointmentDTO như code</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RADTGetController.GetICD10(System.Int64,System.Int64,System.String)">
+            <summary>
+            Hàm get thông tin ICD10
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageNumber"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetApplication(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách Application
+            </summary>
+            <remarks>
+            Dữ liệu trả về
+            <example> 
+            <code>
+                [{
+                    PAppFuncID: null,//ID Cha
+                    AppFuncID: 1, //Mã Function
+                    AppFunctions: PAS,//Mã ID cấp cha
+                    AppTitle: Title,//Tiêu đề
+                    AppDesc: AppDesc,//Mô tả
+                    LandingPageURL: null,
+                    ColorSchema: null,
+                    IconPath: null,
+                    Badge: null,
+                    IsLongTile: null,
+                    Idx: null,
+                    NotDisplayed: null,
+                    FuncType: M,
+                    level: 0,
+                    Total: 145
+                }]
+            </code>
+            </example>
+            </remarks>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns> 
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetForeignExchange(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách tỉ giá chuyển đổi
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetInsuranceCompany(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách các công ty bảo hiểm
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetJobModel(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách mô hình công việc
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetOrganization(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Lấy danh sách tổ chức phi chính phủ
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <param name="AccountID">AccountID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetPatientClassification(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Lấy danh sách phân loại đối tượng bệnh nhân
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <param name="AccountID">AccountID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetPerApplication(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách PerApplication
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefAdmissionType(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Lấy danh mục loại nhân viên
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <param name="AccountID">số trang hiện tại</param>s
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefAdmReferralType(System.Int32,System.Int32)">
+            <summary>
+            Lấy  danh mục loại giới thiệu
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefAppConfig(System.Int64,System.String)">
+            <summary>
+            Lấy danh sách cấu hình
+            </summary>
+            <param name="AccountID">Mã tài khoản</param>
+            <param name="ConfigItemKey">Tên khóa config</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefBloodType(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục nhóm máu
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCertification(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục các loại chứng chỉ, chứng nhận
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCityProvince(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            lấy danh mục tỉnh/thành phố
+            </summary>
+            <param name="PageSize"></param> Số hàng trong một trang
+            <param name="PageNumber"></param> số trang
+            <param name="CountryID"></param> Mã quốc gia 2 ký tự
+            <param name="OrderByName"></param>Tên trường dữ liệu cần sort
+            <param name="OrderByType"></param>Loại sort (ASC hay DESC)
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCLMeasurement(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục hệ thống phân loại đơn vị đo lường
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCommonTerm(System.Int32,System.Int32)">
+            <summary>
+            Dien giai cho ca cum tu viet tat, va y nghia trong cac don vi do dung trong y hoc va xet nghiem
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCountry(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách quốc gia
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetDialingCodeCountry(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lấy danh sách DialingCode
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageNumber"></param>
+            <param name="CountryID">Mã quốc gia nếu có</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefDischargeDisposition(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục hướng xử lý sau khi kết thúc khám/điều trị (theo ASTM)
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefDistrict(System.Int32,System.Int32,System.String)">
+            <summary>
+            Lấy danh sách quận/huyện
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            //Trong Tran Update cho lọc theo mã TP / Tỉnh
+            <param name="CityProvinceID">Mã TP/Tỉnh</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefEducationalLevel(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách trình độ học vấn
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefEthnicGroup(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách dân tộc (theo ASTM)
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefExamObservation(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục quan sát đánh giá
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefFAMRelationship(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục các quan hệ gia đình
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefHL7(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục chuẩn HL7 (Store category of The Health Level Seven )
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefHumanLanguage(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục các ngôn ngữ được sử dụng trên thế giới (không theo quy đinh của HL7, tuy nhiên có quy định trong 1 vài hệ thống hay chuẩn khác)
+            </summary>
+            <remarks>
+            <code>
+            [{
+                HLID: "", //Mã ngôn ngữ
+                HLCode: "" , //Mã code của ngôn ngữ
+                HLName: "", Tên ngôn ngữ
+            }]
+            </code>
+            </remarks>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefInstUniversity(System.Int32,System.Int32)">
+            <summary>
+            Thông tin về các học viện, trường đại học
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefJobBand(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách nhóm các vị trí công việc tương đồng nhau bao gồm những loại công việc hay trách nhiệm cần thực hiện ở những giới hạn phạm vi khác nhau
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefJobTitle(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục chức danh
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefMedicalCondition(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefOccupation(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục nghề nghiệp
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefPersGender(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục giới tính
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefPersMaritalStatus(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh mục tình trạng hôn nhân
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefProviderType(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách danh muc loại bệnh viện
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefQualification(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách các lĩnh vực chuyên môn trong bệnh viện
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefRole(HealthCareAPI.DTO.QueryDTO)">
+            <summary>
+            Danh sách vai trò của người dùng/nhân viên
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefSIPrefix(System.Int32,System.Int32)">
+            <summary>
+            Danh sách típ đầu ngữ trong danh sách đơn vị đo lường
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefVitalSign(System.Int32,System.Int32)">
+            <summary>
+            lấy danh sách danh mục dấu hiệu sinh tồn
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefWard(System.Int32,System.Int32)">
+            <summary>
+            Lấy danh sách phường xã/thị trấn
+            </summary>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefLookup(System.Int64,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Lấy danh mục dùng chung
+            </summary>
+            <param name="AccountID"></param>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber">số trang hiện tại</param>
+            <param name="OrderByName">Column Name Order</param>
+            <param name="OrderByType">Type Order(ASC, DESC)</param>
+            <param name="ObjectName">ObjectName</param> 
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefReligion(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục tôn giáo
+            </summary>
+            <param name="AccountID"></param>
+            <param name="PageSize">số dòng dữ liệu cần lấy trong 1 trang, PageSize = -1 lấy tất cả danh sách</param>
+            <param name="PageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetMesrtConv(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục chuyển đổi đơn vị đo lường
+            </summary>
+            <param name="AccountID">AccountID</param>
+            <param name="PageSize">PageSize</param>
+            <param name="PageNumber">PageNumber</param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefPersRace(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Lấy danh mục chủng tộc
+            </summary>
+            <param name="AccountID"></param>
+            <param name="PageSize"></param>
+            <param name="PageNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefElthnic(HealthCareAPI.DTO.GetRefElthnic)">
+            <summary>
+            Lấy danh mục dân tộc
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCurrency(HealthCareAPI.DTO.QueryDTO)">
+            <summary>
+            Lấy danh sách danh mục tiền tệ
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefCareerMOH(HealthCareAPI.DTO.QueryDTO)">
+            <summary>
+            Lấy danh sách danh mục nghề nghiệp theo bảo hiểm y tế
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefAnnTemp(HealthCareAPI.DTO.RefAnnTemp)">
+            <summary>
+             Lấy danh sách cấu trúc mẫu mail
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefExamAction(HealthCareAPI.DTO.QueryDTO)">
+            <summary>
+            Lấy danh sách danh mục hoạt động đánh giá kiểm tra
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetWard(HealthCareAPI.DTO.QueryDTO)">
+            <summary>
+            Lấy danh sách các Xã
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure(HealthCareAPI.DTO.GetRefUnitOfMeasureDTO)">
+            <summary>
+            Lây danh sách đơn vị tính
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:HealthCareAPI.DTO.PatientHIDTO.PersonalBHCode" -->
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.LastName">
+            <summary>
+            Tên
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.FirstName">
+            <summary>
+            Họ và tên đệm
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.DOB">
+            <summary>
+            Ngày sinh dd/MM/yyyy
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.EmailAddress">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.MobilePhoneNumber">
+            <summary>
+            Số điện thoại
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.OTP">
+            <summary>
+            Mã OTP
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.PPN">
+            <summary>
+            Số CMND/Hộ chiếu
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.PersonID">
+            <summary>
+            Mã Person
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegistrationInfo.ReqCfmBySMS">
+            <summary>
+            Yeu cau xac nhan bang SMS
+            NULL | 0 khong yeu cau xac nhan bang SMS(mac dinh)
+            1 Yeu cau xac nhan bang SMS
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.OQueueID">
+            <summary>
+            Mã hàng đợi online
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.ApptDate">
+            <summary>
+            Ngày đặt lịch hẹn dd/MM/yyyy
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.AppTime">
+            <summary>
+            giờ đặt lịch hẹn
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.WSID">
+            <summary>
+            Mã khung giờ làm việc của bác sĩ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.WDID">
+            <summary>
+            Mã phòng khám
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.TFID">
+            <summary>
+            Mã khung giờ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.V_ApptStatus">
+            <summary>
+            Mã phương thức khám chữa bệnh theo yêu cầu
+            200	V_ApptStatus	Others	Khác 
+            201 New Khám mới 
+            202	Follow-up examination   Tái khám
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.V_ApptMethod">
+            <summary>
+            Tình trạng thăm khám, khám mới/tái khám
+            7800	1	V_ApptMethod	Others	Hình thức đăng ký KCB khác 
+            7801	1	V_ApptMethod Direct Registration Đăng ký KCB trực tiếp 
+            7802	1	V_ApptMethod Online Registration Đăng ký KCB trực tuyến
+            7803	1	V_ApptMethod SMS Registration Đăng ký KCB qua SMS
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.SubApptDate">
+            <summary>
+            Ngày đặt lịch hẹn thứ 2 dd/MM/yyyy
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.SubAppTime">
+            <summary>
+            giờ đặt lịch hẹn thứ 2
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.Appointment.ReasonOrSymptom">
+            <summary>
+            Lý do khám bệnh
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.EmailAddress">
+            <summary>
+            Địa chỉ email
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.AccountPwd">
+            <summary>
+            Mật khẩu đã được md5
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.PrimaryRoleID">
+            <summary>
+            Mã Role chính của tài khoản
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.V_AccountType">
+            <summary>
+            Loại tài khoản lấy trong reflookup
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.FirstName">
+            <summary>
+            Họ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.LastName">
+            <summary>
+            Tên và họ đệm
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.PersBirthDtm">
+            <summary>
+            Ngày sinh format MM/dd/YYYY
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.OtherPersonDetails">
+            <summary>
+            Thông tin khác
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.PersPermanentAddressText">
+            <summary>
+            Địa chỉ nhà/đường
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.CountryID">
+            <summary>
+            Mã quốc gia
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.CityProvinceID">
+            <summary>
+            Mã tỉnh/Thành phố
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.DistrictID">
+            <summary>
+            Mã Quận/huyện
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.LandLine">
+            <summary>
+            Sđt bàn
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.PersHomePhonePhN">
+            <summary>
+            Số đt di động
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.PersonType">
+            <summary>
+            Loại người dùng trong quan hệ thừa kế
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.NationnalityCode">
+            <summary>
+            Mã Quốc tích mặc đinh là 'VN'
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.Perscode">
+            <summary>
+            Mã bệnh nhân nếu là bệnh nhân ngược lại nếu là nhân viên bệnh viện sẽ là mã CMND/Mã thẻ hành nghề
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.JTID">
+            <summary>
+            Mã chức danh, vài trò của nhân viên y tế.
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RegisterAccountDTO.Url">
+            <summary>
+            Đường dẫn site
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.QueryDTO.AccountID">
+            <summary>
+            Mã tài khoản người dùng
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.QueryDTO.PageNumber">
+            <summary>
+            Trang hiện tại lấy dữ liệu
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.QueryDTO.OrderByName">
+            <summary>
+            Tên trường cần sort
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.QueryDTO.OrderByType">
+            <summary>
+            Kiểu sort "ASC" Hoặc "DESC"
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.QueryDTO.PageSize">
+            <summary>
+            Số dòng dữ liệu cần lấy; Null hoặc -1 lấy tất cả
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetDataDefault.TableName">
+            <summary>
+            Tên Bảng cần lấy dữ liệu
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetDataDefault.ColumnsName">
+            <summary>
+            Tên Cột cần lấy dữ liệu (Text Field)
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetDataDefault.ColumnsID">
+            <summary>
+            Mã Cột (Value Field)
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetDataDefault.Filter">
+            <summary>
+            Chuổi Filter
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetRefUnitOfMeasureDTO.V_UOMCategory">
+            <summary>
+            Mã Đơn vị tính lấy trong reflookup
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetRefUnitOfMeasureDTO.MCLID">
+            <summary>
+            Mã hệ thống phân loại đo lường
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetRefElthnic.PtEthnicGroupID">
+            <summary>
+            Mã nhóm dân tộc
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RefAnnTemp.V_AnnTempType">
+            <summary>
+            Mã loại mẫu thư được lấy từ bảng reflookup
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.RefAnnTemp.AnnTempName">
+            <summary>
+            Tên loại Mẫu mail
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetHospitaltDTO.ProvinceID">
+            <summary>
+            Mã Tĩnh
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetHospitaltDTO.HCPrvProviderName">
+            <summary>
+            Tên bệnh viện
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetHospitaltDTO.HCPrvProviderId">
+            <summary>
+            Mã Bệnh viện
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.EmpAllocation.DeptID">
+            <summary>
+            Mã Chuyên khoa
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.EmpAllocation.HosID">
+            <summary>
+            Mã Bệnh viên
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetMedicalServiceItem.DeptID">
+            <summary>
+            Mã chuyên khoa
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetMedicalServiceItem.MedSerID">
+            <summary>
+            Mã dịch vụ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetMedicalServiceItem.QuotationIDMOHS">
+            <summary>
+            Mã xác nhận xem có phải dịch vụ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetMedicalServiceItem.QuotationHIS">
+            <summary>
+            Mã xác nhận bệnh nhân bảo hiểm y tế
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.GetMedicalServiceItem.MedSerName">
+            <summary>
+            Tên dịch vụ
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.AppConfigDTO.JsonAppConfig">
+            <summary>
+            Json các thông tin về appconfig
+            <code>
+            [{
+                A_VATPercent: "value"
+            }]
+            </code>
+            </summary>
+            <remarks>
+            <example> 
+            <code>
+            [{
+                A_VATPercent: "value"
+            }]
+            </code>
+            </example> 
+            </remarks>
+        </member>
+        <member name="P:HealthCareAPI.DTO.AppConfigDTO.JsonHCProvider">
+            <summary>
+            Json các thông tin về bệnh viện
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.ExecuteStoreDTO.name">
+            <summary>
+            Tên store
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.ExecuteStoreDTO.objName">
+            <summary>
+            List tên param
+            </summary>
+        </member>
+        <member name="P:HealthCareAPI.DTO.ExecuteStoreDTO.objValue">
+            <summary>
+            List tên giá trị param
+            </summary>
+        </member>
+        <member name="F:HealthCareAPI.DTO.ReturnCode.UPDATE_SUCCESS">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

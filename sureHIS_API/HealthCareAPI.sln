@@ -1,0 +1,195 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareAPI", "HealthCareAPI\HealthCareAPI.csproj", "{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{756F4BDB-84E4-4378-8287-781D046734BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Poco", "Poco", "{C3EE2584-0B64-4B85-9F52-0A2AEB7D8E3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{E31604E3-ECE6-4B70-9304-C3F45068B6E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Core.DAL.Base", "LV.Core.DAL.Base\LV.Core.DAL.Base.csproj", "{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Core.DAL.EntityFramework", "LV.Core.DAL.EntityFramework\LV.Core.DAL.EntityFramework.csproj", "{1FC136A1-F9EE-467D-8A39-0C4011AFB919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Poco", "LV.Poco\LV.Poco.csproj", "{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.PocoMapping", "LV.PocoMapping\LV.PocoMapping.csproj", "{751BD6BF-641D-4A56-9F31-64365CA191DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Common", "LV.Common\LV.Common.csproj", "{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Service.AD", "LV.Service.AD\LV.Service.AD.csproj", "{333EBF1C-C560-45A1-914B-0BE11EB76015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Service.Common", "LV.Service.Common\LV.Service.Common.csproj", "{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LV.Service.EPORTAL", "LV.Service.Eportal\LV.Service.EPORTAL.csproj", "{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.SqlServer", "EntityFramework.SqlServer\EntityFramework.SqlServer.csproj", "{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugNet40|Any CPU = DebugNet40|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseNet40|Any CPU = ReleaseNet40|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{B688DE7E-4709-408F-A57B-DDF57B1D6D7F}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{751BD6BF-641D-4A56-9F31-64365CA191DD}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{333EBF1C-C560-45A1-914B-0BE11EB76015}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.DebugNet40|Any CPU.ActiveCfg = DebugNet40|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.DebugNet40|Any CPU.Build.0 = DebugNet40|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.ReleaseNet40|Any CPU.ActiveCfg = ReleaseNet40|Any CPU
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F}.ReleaseNet40|Any CPU.Build.0 = ReleaseNet40|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.DebugNet40|Any CPU.ActiveCfg = DebugNet40|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.DebugNet40|Any CPU.Build.0 = DebugNet40|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.ReleaseNet40|Any CPU.ActiveCfg = ReleaseNet40|Any CPU
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A}.ReleaseNet40|Any CPU.Build.0 = ReleaseNet40|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{055A8E46-DEBE-4DB0-A61C-711D7F8328BB} = {756F4BDB-84E4-4378-8287-781D046734BE}
+		{1FC136A1-F9EE-467D-8A39-0C4011AFB919} = {756F4BDB-84E4-4378-8287-781D046734BE}
+		{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5} = {C3EE2584-0B64-4B85-9F52-0A2AEB7D8E3A}
+		{751BD6BF-641D-4A56-9F31-64365CA191DD} = {C3EE2584-0B64-4B85-9F52-0A2AEB7D8E3A}
+		{1A3E3A49-C8A8-4172-A3B3-A0A88A57CDD3} = {E31604E3-ECE6-4B70-9304-C3F45068B6E4}
+		{333EBF1C-C560-45A1-914B-0BE11EB76015} = {E31604E3-ECE6-4B70-9304-C3F45068B6E4}
+		{AF6ADDC9-B356-4E67-8EE7-08C0790D2751} = {E31604E3-ECE6-4B70-9304-C3F45068B6E4}
+		{76BB2BE3-4FF5-49BC-B360-1B1D98CA9D5F} = {E31604E3-ECE6-4B70-9304-C3F45068B6E4}
+		{E06D1C12-EFE8-4413-A15C-AE01FC158F2F} = {756F4BDB-84E4-4378-8287-781D046734BE}
+		{6F4BB80B-5F74-44D3-A77F-0025DFA48C1A} = {756F4BDB-84E4-4378-8287-781D046734BE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2017:8080/tfs/mhs
+		SccProjectUniqueName0 = LV.Core.DAL.Base\\LV.Core.DAL.Base.csproj
+		SccProjectTopLevelParentUniqueName0 = HealthCareAPI.sln
+		SccProjectName0 = LV.Core.DAL.Base
+		SccLocalPath0 = LV.Core.DAL.Base
+		SccProjectUniqueName1 = LV.Core.DAL.EntityFramework\\LV.Core.DAL.EntityFramework.csproj
+		SccProjectTopLevelParentUniqueName1 = HealthCareAPI.sln
+		SccProjectName1 = LV.Core.DAL.EntityFramework
+		SccLocalPath1 = LV.Core.DAL.EntityFramework
+		SccProjectUniqueName2 = LV.Poco\\LV.Poco.csproj
+		SccProjectTopLevelParentUniqueName2 = HealthCareAPI.sln
+		SccProjectName2 = LV.Poco
+		SccLocalPath2 = LV.Poco
+		SccProjectUniqueName3 = LV.PocoMapping\\LV.PocoMapping.csproj
+		SccProjectTopLevelParentUniqueName3 = HealthCareAPI.sln
+		SccProjectName3 = LV.PocoMapping
+		SccLocalPath3 = LV.PocoMapping
+		SccProjectUniqueName4 = LV.Common\\LV.Common.csproj
+		SccProjectTopLevelParentUniqueName4 = HealthCareAPI.sln
+		SccProjectName4 = LV.Common
+		SccLocalPath4 = LV.Common
+		SccProjectUniqueName5 = LV.Service.AD\\LV.Service.AD.csproj
+		SccProjectTopLevelParentUniqueName5 = HealthCareAPI.sln
+		SccProjectName5 = LV.Service.AD
+		SccLocalPath5 = LV.Service.AD
+		SccProjectUniqueName6 = LV.Service.Common\\LV.Service.Common.csproj
+		SccProjectTopLevelParentUniqueName6 = HealthCareAPI.sln
+		SccProjectName6 = LV.Service.Common
+		SccLocalPath6 = LV.Service.Common
+		SccProjectUniqueName7 = LV.Service.Eportal\\LV.Service.EPORTAL.csproj
+		SccProjectTopLevelParentUniqueName7 = HealthCareAPI.sln
+		SccProjectName7 = LV.Service.Eportal
+		SccLocalPath7 = LV.Service.Eportal
+		SccProjectUniqueName8 = EntityFramework\\EntityFramework.csproj
+		SccProjectTopLevelParentUniqueName8 = HealthCareAPI.sln
+		SccProjectName8 = EntityFramework
+		SccLocalPath8 = EntityFramework
+		SccProjectUniqueName9 = EntityFramework.SqlServer\\EntityFramework.SqlServer.csproj
+		SccProjectTopLevelParentUniqueName9 = HealthCareAPI.sln
+		SccProjectName9 = EntityFramework.SqlServer
+		SccLocalPath9 = EntityFramework.SqlServer
+		SccLocalPath10 = .
+		SccProjectUniqueName11 = HealthCareAPI\\HealthCareAPI.csproj
+		SccProjectName11 = HealthCareAPI
+		SccLocalPath11 = HealthCareAPI
+	EndGlobalSection
+EndGlobal

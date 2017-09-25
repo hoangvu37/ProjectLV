@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9609AE1-B1C6-43C6-94F0-8FEBBF7BA4A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LV.Poco</RootNamespace>
+    <AssemblyName>LV.Poco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\HealthCareAPI\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\HealthCareAPI\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vse.Web.Serialization, Version=1.0.4.0, Culture=neutral, PublicKeyToken=fb838febb49f46b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vse.Web.Serialization.ControlledSerializationJsonConverter.1.0.4\lib\net45\Vse.Web.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="CustomPoco\HealthInsurance.cs" />
+    <Compile Include="CustomPoco\Application.cs" />
+    <Compile Include="CustomPoco\PrivilegeRole.cs" />
+    <Compile Include="CustomPoco\FunctionList.cs" />
+    <Compile Include="CustomPoco\UserAccountInfo.cs" />
+    <Compile Include="CustomPoco\UserRoles.cs" />
+    <Compile Include="CustomValidate.cs" />
+    <Compile Include="GenPoco1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenPoco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\FWEnum.cs" />
+    <Compile Include="Hubs\LVHubsHelper.cs" />
+    <Compile Include="Hubs\LVRecordInfoHub.cs" />
+    <Compile Include="Hubs\LVUtility.cs" />
+    <Compile Include="Hubs\RecordInfo.cs" />
+    <Compile Include="Model\AdmissionTree.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\ConfigRADT.cs" />
+    <Compile Include="Model\ConfigSys.cs" />
+    <Compile Include="Model\DayInWork.cs" />
+    <Compile Include="Model\DemographicsInfo.cs" />
+    <Compile Include="Model\FunctionInfo.cs" />
+    <Compile Include="Model\GroupInfo.cs" />
+    <Compile Include="Model\PatientHI.cs" />
+    <Compile Include="Model\Register.cs" />
+    <Compile Include="Model\RegistrationModel.cs" />
+    <Compile Include="Model\RunCostingInfo.cs" />
+    <Compile Include="Model\R_SearchPatient.cs" />
+    <Compile Include="Model\ServiceItem.cs" />
+    <Compile Include="Model\TreeViewObject.cs" />
+    <Compile Include="Model\UserAccountInfo.cs" />
+    <Compile Include="Model\UserPermissionModel.cs" />
+    <Compile Include="Object\AcPrincDrug.cs" />
+    <Compile Include="Object\AdmNoTemp.cs" />
+    <Compile Include="Object\AdvancedSpecialist.cs" />
+    <Compile Include="Object\Alert.cs" />
+    <Compile Include="Object\AllergyIntolerance.cs" />
+    <Compile Include="Object\AntagonistDrug.cs" />
+    <Compile Include="Object\Application.cs" />
+    <Compile Include="Object\AppliedMedStandard.cs" />
+    <Compile Include="Object\Appointment.cs" />
+    <Compile Include="Object\ArchitectureResources.cs" />
+    <Compile Include="Object\ASPNetRole.cs" />
+    <Compile Include="Object\ASPNetRolePermission.cs" />
+    <Compile Include="Object\ASPNetToken.cs" />
+    <Compile Include="Object\ASPNetUser.cs" />
+    <Compile Include="Object\ASPNetUserClaims.cs" />
+    <Compile Include="Object\ASPNetUserLogin.cs" />
+    <Compile Include="Object\ASPNetUserRole.cs" />
+    <Compile Include="Object\AssignMedEquip.cs" />
+    <Compile Include="Object\AssignmentSchedule.cs" />
+    <Compile Include="Object\AttachedDoc.cs" />
+    <Compile Include="Object\BedInRoom.cs" />
+    <Compile Include="Object\Bloodbank.cs" />
+    <Compile Include="Object\BloodDonation.cs" />
+    <Compile Include="Object\BodyRegion.cs" />
+    <Compile Include="Object\BusySchedule.cs" />
+    <Compile Include="Object\ChainMedicalServices.cs" />
+    <Compile Include="Object\ClinicalIndicatorType.cs" />
+    <Compile Include="Object\ClinicalTrial.cs" />
+    <Compile Include="Object\ClinicalTrialResult.cs" />
+    <Compile Include="Object\ContactDetails.cs" />
+    <Compile Include="Object\Contract.cs" />
+    <Compile Include="Object\ContractChange.cs" />
+    <Compile Include="Object\ContractDocument.cs" />
+    <Compile Include="Object\DDI.cs" />
+    <Compile Include="Object\DeathSituationInfo.cs" />
+    <Compile Include="Object\DHCRoomBlock.cs" />
+    <Compile Include="Object\DiagDescribeTmp.cs" />
+    <Compile Include="Object\DisposableMDResource.cs" />
+    <Compile Include="Object\DocItem.cs" />
+    <Compile Include="Object\Donor.cs" />
+    <Compile Include="Object\DonorMedicalConditions.cs" />
+    <Compile Include="Object\DonorMedication.cs" />
+    <Compile Include="Object\DrAdviceTmp.cs" />
+    <Compile Include="Object\DrMedicineAdvice.cs" />
+    <Compile Include="Object\DrMedicineTmp.cs" />
+    <Compile Include="Object\DrPrescriptionTmp.cs" />
+    <Compile Include="Object\DrPrescriptionTmps.cs" />
+    <Compile Include="Object\Drug.cs" />
+    <Compile Include="Object\DrugConfign.cs" />
+    <Compile Include="Object\DrugInDepartment.cs" />
+    <Compile Include="Object\DrugPrice.cs" />
+    <Compile Include="Object\EduLevel.cs" />
+    <Compile Include="Object\EmpAllocation.cs" />
+    <Compile Include="Object\Employee.cs" />
+    <Compile Include="Object\EmployeeAnnualLeave.cs" />
+    <Compile Include="Object\EmployeeLeaveTaken.cs" />
+    <Compile Include="Object\Employeer.cs" />
+    <Compile Include="Object\EmpWorkSchedule.cs" />
+    <Compile Include="Object\EquipHistory.cs" />
+    <Compile Include="Object\EquivMedService.cs" />
+    <Compile Include="Object\EventHoliday.cs" />
+    <Compile Include="Object\ExamMaintenanceHistory.cs" />
+    <Compile Include="Object\FamilyHistory.cs" />
+    <Compile Include="Object\ForeignExchange.cs" />
+    <Compile Include="Object\GenericSocialNetwork.cs" />
+    <Compile Include="Object\HCProvider.cs" />
+    <Compile Include="Object\HCRoomBlock.cs" />
+    <Compile Include="Object\HCStakeholder.cs" />
+    <Compile Include="Object\HealthCareQueue.cs" />
+    <Compile Include="Object\HealthInsurance.cs" />
+    <Compile Include="Object\HIAdmission.cs" />
+    <Compile Include="Object\HIServiceItem.cs" />
+    <Compile Include="Object\HIServiceItems.cs" />
+    <Compile Include="Object\HistoricalAuditData.cs" />
+    <Compile Include="Object\HosFeeTransDetails.cs" />
+    <Compile Include="Object\HospitalFeeTransaction.cs" />
+    <Compile Include="Object\HospitalizationHistory.cs" />
+    <Compile Include="Object\HospitalizationHistoryDetails.cs" />
+    <Compile Include="Object\HospitalSpecialist.cs" />
+    <Compile Include="Object\HosRanking.cs" />
+    <Compile Include="Object\ICD10.cs" />
+    <Compile Include="Object\ICDChapter.cs" />
+    <Compile Include="Object\ICDGroup.cs" />
+    <Compile Include="Object\ImmunizationHistory.cs" />
+    <Compile Include="Object\InOutType.cs" />
+    <Compile Include="Object\InOutwardDrug.cs" />
+    <Compile Include="Object\InputMaskSetting.cs" />
+    <Compile Include="Object\InsuranceBeneficiary.cs" />
+    <Compile Include="Object\InsuranceCompany.cs" />
+    <Compile Include="Object\InsuranceInterests.cs" />
+    <Compile Include="Object\InsuranceRegQueue.cs" />
+    <Compile Include="Object\JobHistory.cs" />
+    <Compile Include="Object\JobModel.cs" />
+    <Compile Include="Object\LanguageLevel.cs" />
+    <Compile Include="Object\LotNumber.cs" />
+    <Compile Include="Object\MedEnctrDiagnosis.cs" />
+    <Compile Include="Object\MedicalBill.cs" />
+    <Compile Include="Object\MedicalBills.cs" />
+    <Compile Include="Object\MedicalClaimService.cs" />
+    <Compile Include="Object\MedicalConditionRecord.cs" />
+    <Compile Include="Object\MedicalDiagnosticMethod.cs" />
+    <Compile Include="Object\MedicalEncounter.cs" />
+    <Compile Include="Object\MedicalEquimentsResources.cs" />
+    <Compile Include="Object\MedicalServiceItem.cs" />
+    <Compile Include="Object\MedicalServicePackage.cs" />
+    <Compile Include="Object\MedicalTestProcedure.cs" />
+    <Compile Include="Object\MedicationHistory.cs" />
+    <Compile Include="Object\MedImagingRepository.cs" />
+    <Compile Include="Object\MedImagingTest.cs" />
+    <Compile Include="Object\MedImagingTestItems.cs" />
+    <Compile Include="Object\MedLabRepository.cs" />
+    <Compile Include="Object\MedLabTest.cs" />
+    <Compile Include="Object\MedLabTestItems.cs" />
+    <Compile Include="Object\MedRecOutline.cs" />
+    <Compile Include="Object\MedRecTmp.cs" />
+    <Compile Include="Object\MedSerInDept.cs" />
+    <Compile Include="Object\MesrtConv.cs" />
+    <Compile Include="Object\MiscDocuments.cs" />
+    <Compile Include="Object\MOHServiceItems.cs" />
+    <Compile Include="Object\MRParagraph.cs" />
+    <Compile Include="Object\MRSection.cs" />
+    <Compile Include="Object\MRSectionOutline.cs" />
+    <Compile Include="Object\NetworkGuestAccount.cs" />
+    <Compile Include="Object\NextOfKins.cs" />
+    <Compile Include="Object\OccCareerMOH.cs" />
+    <Compile Include="Object\OnlineQueue.cs" />
+    <Compile Include="Object\Operations.cs" />
+    <Compile Include="Object\OperationSchedule.cs" />
+    <Compile Include="Object\OpSkedDistibution.cs" />
+    <Compile Include="Object\Organization.cs" />
+    <Compile Include="Object\ParaClinicalExamGroup.cs" />
+    <Compile Include="Object\ParaClinicalReq.cs" />
+    <Compile Include="Object\ParaClinicalReqDetails.cs" />
+    <Compile Include="Object\PastPersonHistory.cs" />
+    <Compile Include="Object\Patient.cs" />
+    <Compile Include="Object\PatientAddressHistory.cs" />
+    <Compile Include="Object\PatientAdmission.cs" />
+    <Compile Include="Object\PatientBed.cs" />
+    <Compile Include="Object\PatientBedFeatures.cs" />
+    <Compile Include="Object\PatientClassHistory.cs" />
+    <Compile Include="Object\PatientClassification.cs" />
+    <Compile Include="Object\PatientCommonMedRecord.cs" />
+    <Compile Include="Object\PatientDiagnosticImaging.cs" />
+    <Compile Include="Object\PatientInBedRoom.cs" />
+    <Compile Include="Object\PatientInvoices.cs" />
+    <Compile Include="Object\PatientMedLabTestResult.cs" />
+    <Compile Include="Object\PatientMedRecord.cs" />
+    <Compile Include="Object\PatientProblem.cs" />
+    <Compile Include="Object\PatientPVID.cs" />
+    <Compile Include="Object\PatientSpecimen.cs" />
+    <Compile Include="Object\PatientTransaction.cs" />
+    <Compile Include="Object\PatientVitalSign.cs" />
+    <Compile Include="Object\Person.cs" />
+    <Compile Include="Object\PersonalProperty.cs" />
+    <Compile Include="Object\PersonRole.cs" />
+    <Compile Include="Object\PharmaceuticalCompany.cs" />
+    <Compile Include="Object\PhysicalExamination.cs" />
+    <Compile Include="Object\Prescription.cs" />
+    <Compile Include="Object\PrescriptionDetail.cs" />
+    <Compile Include="Object\PrescriptionHistory.cs" />
+    <Compile Include="Object\PriceList.cs" />
+    <Compile Include="Object\PrivacyClass.cs" />
+    <Compile Include="Object\PrivilegeRole.cs" />
+    <Compile Include="Object\PromotionPlan.cs" />
+    <Compile Include="Object\PromotionService.cs" />
+    <Compile Include="Object\ProvidableDrugs.cs" />
+    <Compile Include="Object\PtCodeCheckDigitTmp.cs" />
+    <Compile Include="Object\Quotation.cs" />
+    <Compile Include="Object\Realms.cs" />
+    <Compile Include="Object\refAcademicTile.cs" />
+    <Compile Include="Object\refActiviePrinciple.cs" />
+    <Compile Include="Object\refAdmissionType.cs" />
+    <Compile Include="Object\refAdmReferralType.cs" />
+    <Compile Include="Object\refAllergyCategory.cs" />
+    <Compile Include="Object\refAllergyIndex.cs" />
+    <Compile Include="Object\refAnnTemp.cs" />
+    <Compile Include="Object\refAppConfig.cs" />
+    <Compile Include="Object\refBloodType.cs" />
+    <Compile Include="Object\refCareerMOH.cs" />
+    <Compile Include="Object\refCertification.cs" />
+    <Compile Include="Object\refCityProvince.cs" />
+    <Compile Include="Object\refCLMeasurement.cs" />
+    <Compile Include="Object\refCommonTerm.cs" />
+    <Compile Include="Object\refCountry.cs" />
+    <Compile Include="Object\refCurrency.cs" />
+    <Compile Include="Object\refDepartment.cs" />
+    <Compile Include="Object\refDepreciationType.cs" />
+    <Compile Include="Object\refDiagnosis.cs" />
+    <Compile Include="Object\refDischargeDisposition.cs" />
+    <Compile Include="Object\refDistrict.cs" />
+    <Compile Include="Object\refDrugKind.cs" />
+    <Compile Include="Object\refEducationalLevel.cs" />
+    <Compile Include="Object\refElthnic.cs" />
+    <Compile Include="Object\refEthnicGroup.cs" />
+    <Compile Include="Object\refExamAction.cs" />
+    <Compile Include="Object\refExamObservation.cs" />
+    <Compile Include="Object\refFAMRelationship.cs" />
+    <Compile Include="Object\refHL7.cs" />
+    <Compile Include="Object\refHumanLanguage.cs" />
+    <Compile Include="Object\refImmunization.cs" />
+    <Compile Include="Object\refInstUniversity.cs" />
+    <Compile Include="Object\refInsurKind.cs" />
+    <Compile Include="Object\refInternalReceiptType.cs" />
+    <Compile Include="Object\refItemType.cs" />
+    <Compile Include="Object\refJobBand.cs" />
+    <Compile Include="Object\refJobTitle.cs" />
+    <Compile Include="Object\refLimVitalSign.cs" />
+    <Compile Include="Object\refLookup.cs" />
+    <Compile Include="Object\refMedcnAdminRoute.cs" />
+    <Compile Include="Object\refMedcnVehicleForm.cs" />
+    <Compile Include="Object\refMedEquipResourceType.cs" />
+    <Compile Include="Object\refMedHisIndex.cs" />
+    <Compile Include="Object\refMedicalCondition.cs" />
+    <Compile Include="Object\refMedicalServiceType.cs" />
+    <Compile Include="Object\refOccupation.cs" />
+    <Compile Include="Object\refPermission.cs" />
+    <Compile Include="Object\refPersGender.cs" />
+    <Compile Include="Object\refPersMaritalStatus.cs" />
+    <Compile Include="Object\refPersRace.cs" />
+    <Compile Include="Object\refProblem.cs" />
+    <Compile Include="Object\refProviderType.cs" />
+    <Compile Include="Object\refQualification.cs" />
+    <Compile Include="Object\refReligion.cs" />
+    <Compile Include="Object\refRole.cs" />
+    <Compile Include="Object\refShelfDrugLocation.cs" />
+    <Compile Include="Object\refShift.cs" />
+    <Compile Include="Object\refSIPrefix.cs" />
+    <Compile Include="Object\refSocialHisSeverity.cs" />
+    <Compile Include="Object\refSpecimenType.cs" />
+    <Compile Include="Object\refStoreHouse.cs" />
+    <Compile Include="Object\refTimeFrame.cs" />
+    <Compile Include="Object\refTransactionType.cs" />
+    <Compile Include="Object\refTypeAbsent.cs" />
+    <Compile Include="Object\refUnitOfMeasure.cs" />
+    <Compile Include="Object\refVitalSign.cs" />
+    <Compile Include="Object\refWard.cs" />
+    <Compile Include="Object\RegistrationInfo.cs" />
+    <Compile Include="Object\RegQueue.cs" />
+    <Compile Include="Object\ReminderNotices.cs" />
+    <Compile Include="Object\RescrUsedInOperation.cs" />
+    <Compile Include="Object\ResearchPartnership.cs" />
+    <Compile Include="Object\Resource.cs" />
+    <Compile Include="Object\ResourceLog.cs" />
+    <Compile Include="Object\RoomAllocation.cs" />
+    <Compile Include="Object\RxHoldConsultation.cs" />
+    <Compile Include="Object\ScheduleDoingTaskLog.cs" />
+    <Compile Include="Object\SeparationOfBlood.cs" />
+    <Compile Include="Object\ServerLog.cs" />
+    <Compile Include="Object\Session.cs" />
+    <Compile Include="Object\SocialAndHealthInsurance.cs" />
+    <Compile Include="Object\SpecifiedParaclinical.cs" />
+    <Compile Include="Object\SpecMedRecTmp.cs" />
+    <Compile Include="Object\StdKSection.cs" />
+    <Compile Include="Object\Supplier.cs" />
+    <Compile Include="Object\SymptomIndicator.cs" />
+    <Compile Include="Object\TechnicalInspectionAgency.cs" />
+    <Compile Include="Object\TestBlood.cs" />
+    <Compile Include="Object\TestOnPatientSpecimen.cs" />
+    <Compile Include="Object\UserAccount.cs" />
+    <Compile Include="Object\UserGroup.cs" />
+    <Compile Include="Object\UsersInGroup.cs" />
+    <Compile Include="Object\Ward.cs" />
+    <Compile Include="Object\WardInDept.cs" />
+    <Compile Include="Object\WorkingDay.cs" />
+    <Compile Include="Object\WorkingSchedule.cs" />
+    <Compile Include="Object\WorkPlace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validate\LVValidateAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GenPoco.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenPoco1.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Settings.ttinclude" />
+    <None Include="SQLServer.ttinclude" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFramework.SqlServer\EntityFramework.SqlServer.csproj">
+      <Project>{6f4bb80b-5f74-44d3-a77f-0025dfa48c1a}</Project>
+      <Name>EntityFramework.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFramework\EntityFramework.csproj">
+      <Project>{e06d1c12-efe8-4413-a15c-ae01fc158f2f}</Project>
+      <Name>EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LV.Core.DAL.Base\LV.Core.DAL.Base.csproj">
+      <Project>{055a8e46-debe-4db0-a61c-711d7f8328bb}</Project>
+      <Name>LV.Core.DAL.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LV.Core.DAL.EntityFramework\LV.Core.DAL.EntityFramework.csproj">
+      <Project>{1fc136a1-f9ee-467d-8a39-0c4011afb919}</Project>
+      <Name>LV.Core.DAL.EntityFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

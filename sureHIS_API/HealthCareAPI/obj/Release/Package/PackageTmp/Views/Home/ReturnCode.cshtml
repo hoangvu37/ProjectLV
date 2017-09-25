@@ -1,0 +1,32 @@
+﻿@using HealthCareAPI.DTO;
+@{
+    ViewBag.Title = "ReturnCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="pager">
+    <table>
+        <thead>
+            <tr>
+                <th class="col-xs-3">Name</th>
+                <th class="col-xs-1 text-center">Code</th>
+                <th>Descriptions</th>
+            </tr>
+        </thead>
+        @foreach (var returncode in (List<ReturCodeDTO>)ViewBag.ReturnCode)
+        {
+            if (@returncode.GroupName != null)
+            {
+                <tr>
+                    <td class="text-left table-bordered " style="color:red">Function @returncode.GroupName</td>
+                </tr>
+            }
+            <tr>
+                <td class="text-left col-xs-3">@returncode.Name</td>
+                <td class="">@returncode.Code</td>
+                <td>@returncode.Descriptions</td>
+            </tr>
+        }
+    </table>
+
+
+</div>

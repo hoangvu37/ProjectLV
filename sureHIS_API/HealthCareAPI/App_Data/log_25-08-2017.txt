@@ -1,0 +1,31 @@
+
+ ************* 2017-08-25 10:04:26,008 [33] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1253 Object reference not set to an instance of an object. 
+ 
+ ************* 2017-08-25 10:06:31,551 [21] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1253 Object reference not set to an instance of an object. 
+ 
+ ************* 2017-08-25 10:08:02,386 [55] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 Incorrect syntax near 'string'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-08-25 10:08:25,098 [46] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 Incorrect syntax near 'string'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-08-25 10:08:37,388 [54] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 Incorrect syntax near 'string'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-08-25 10:09:00,314 [51] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 The offset specified in a OFFSET clause may not be negative. 
+ 
+ ************* 2017-08-25 10:09:15,544 [51] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 The offset specified in a OFFSET clause may not be negative. 
+ 
+ ************* 2017-08-25 10:10:56,795 [55] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetRefUnitOfMeasure HealthCareAPI.Controllers.RMDGetController.GetRefUnitOfMeasure 1257 The offset specified in a OFFSET clause may not be negative. 
+ 
+ ************* 2017-08-25 15:34:41,878 [7] ERROR HealthCareAPI.Controllers.ConfigSystemController **************  
+AddUpdateRefAppConfig HealthCareAPI.Controllers.ConfigSystemController.AddUpdateRefAppConfig 53 Object reference not set to an instance of an object. 
+ 

@@ -1,0 +1,22 @@
+
+ ************* 2017-09-12 14:14:23,028 [12] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 
+ ************* 2017-09-12 14:14:29,570 [12] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 
+ ************* 2017-09-12 14:47:47,157 [9] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 
+ ************* 2017-09-12 14:47:53,297 [9] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 There is already an object named 'tuantest' in the database. 
+ 
+ ************* 2017-09-12 14:48:57,712 [12] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 
+ ************* 2017-09-12 14:49:28,765 [8] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 
+ ************* 2017-09-12 14:53:22,497 [15] ERROR HealthCareAPI.Controllers.AppointmentController **************  
+GetScheduleOfSpecialist HealthCareAPI.Controllers.AppointmentController.GetScheduleOfSpecialist 260 Cannot find table 0. 
+ 

@@ -1,0 +1,5 @@
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Core.DAL.EntityFramework.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Core.DAL.EntityFramework.pdb
+F:\Work\APITeam\sureHIS_API\LV.Core.DAL.EntityFramework\obj\Release\LV.Core.DAL.EntityFramework.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.Core.DAL.EntityFramework\obj\Release\LV.Core.DAL.EntityFramework.dll
+F:\Work\APITeam\sureHIS_API\LV.Core.DAL.EntityFramework\obj\Release\LV.Core.DAL.EntityFramework.pdb

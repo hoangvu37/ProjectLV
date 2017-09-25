@@ -1,0 +1,33 @@
+
+ ************* 2017-09-11 16:31:52,157 [5] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 129 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:32:11,228 [28] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 129 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:32:23,441 [29] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 129 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:33:25,744 [10] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 134 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:34:11,153 [10] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 134 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:35:56,026 [10] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 134 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:36:10,220 [10] ERROR HealthCareAPI.Controllers.CommonController **************  
+GetRefAppConfigTestPaging HealthCareAPI.Controllers.CommonController.GetRefAppConfigTestPaging 134 Incorrect syntax near 'ConfigItemID'.
+Invalid usage of the option NEXT in the FETCH statement. 
+ 
+ ************* 2017-09-11 16:57:05,308 [13] ERROR HealthCareAPI.Controllers.RMDGetController **************  
+GetApplication HealthCareAPI.Controllers.RMDGetController.GetApplication 67 Cannot open database "HealthCare" requested by the login. The login failed.
+Login failed for user 'hcdev'. 
+ 

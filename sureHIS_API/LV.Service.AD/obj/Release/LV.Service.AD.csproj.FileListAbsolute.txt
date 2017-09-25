@@ -1,0 +1,12 @@
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Service.AD.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Service.AD.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Service.AD.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Service.AD.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Service.AD.dll
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Service.AD.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Service.AD\obj\Release\LV.Service.AD.pdb

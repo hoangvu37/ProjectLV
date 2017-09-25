@@ -1,0 +1,6 @@
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Poco.dll.config
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Poco.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Poco.pdb
+F:\Work\APITeam\sureHIS_API\LV.Poco\obj\Debug\LV.Poco.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.Poco\obj\Debug\LV.Poco.dll
+F:\Work\APITeam\sureHIS_API\LV.Poco\obj\Debug\LV.Poco.pdb

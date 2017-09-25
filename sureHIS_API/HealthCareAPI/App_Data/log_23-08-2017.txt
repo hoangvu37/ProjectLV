@@ -1,0 +1,49 @@
+
+ ************* 2017-08-23 10:04:47,817 [20] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:04,599 [10] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:45,965 [12] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:46,844 [12] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:47,764 [10] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:48,525 [7] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:22:49,106 [10] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:02,198 [10] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:02,365 [10] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:02,536 [12] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:02,683 [12] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:02,887 [7] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:23:03,167 [11] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 106 Column 'EmpCode' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:24:05,167 [7] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 107 Column 'EmpID' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:24:24,586 [11] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 107 Column 'EmpID' does not belong to table Table. 
+ 
+ ************* 2017-08-23 11:24:32,134 [12] ERROR LV.Service.Common.AccountController **************  
+LoginUserLogic LV.Service.Common.AccountController.LoginUserLogic 107 Column 'EmpID' does not belong to table Table. 
+ 

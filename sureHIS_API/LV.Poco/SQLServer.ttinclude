@@ -1,0 +1,543 @@
+﻿<#@ include file="Settings.ttinclude" #>
+<#+
+
+IDataReader GetReader(string sql)
+{
+    SqlConnection conn = new SqlConnection(ConnectionString);
+    SqlCommand cmd = new SqlCommand(sql, conn);
+    conn.Open();
+    return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+}
+DataTable GetDataTable(string sql)
+{
+	SqlConnection conn = new SqlConnection(ConnectionString);
+    SqlCommand cmd = new SqlCommand(sql, conn);
+    conn.Open();
+ 
+	DataSet ds = new DataSet();
+    SqlDataAdapter da = new SqlDataAdapter(cmd);
+    da.Fill(ds);
+    return ds.Tables[0]; 
+}
+void ExcuteQuery(string sql)
+{
+	SqlConnection conn = new SqlConnection(ConnectionString);
+    SqlCommand cmd = new SqlCommand(sql, conn);
+    conn.Open();
+    cmd.ExecuteNonQuery();
+}
+
+void ExcuteStore(string sqlName, object[] parameterValues)
+{
+	SqlConnection conn = new SqlConnection(ConnectionString);
+    SqlCommand cmd = new SqlCommand(sqlName, conn);
+    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+    conn.Open();
+
+    SqlCommandBuilder.DeriveParameters(cmd);
+    // Initialize Index of parameterValues Array
+    int index = 0;
+    // Populate the Input Parameters With Values Provided        
+    foreach (SqlParameter parameter in cmd.Parameters)
+    {
+        if (parameter.Direction == ParameterDirection.Input ||
+                parameter.Direction == ParameterDirection.
+                                            InputOutput)
+        {
+            parameter.Value = parameterValues[index];
+            index++;
+        }
+    }
+    cmd.ExecuteNonQuery();
+}
+
+SqlCommand GetCommand(string sql)
+{
+    SqlConnection conn = new SqlConnection(ConnectionString);
+    SqlCommand cmd = new SqlCommand(sql, conn);
+    conn.Open();
+    return cmd;
+}
+
+const string FKSql=@"SELECT
+        ThisTable  = FK.TABLE_NAME,
+        ThisColumn = CU.COLUMN_NAME,
+        OtherTable  = PK.TABLE_NAME,
+        OtherColumn = PT.COLUMN_NAME, 
+        Constraint_Name = C.CONSTRAINT_NAME,
+        Owner = FK.TABLE_SCHEMA,
+        FKTableName = FK.Table_NAME,
+        PKTableName = PK.Table_NAME 
+    FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS C
+    INNER JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS FK ON C.CONSTRAINT_NAME = FK.CONSTRAINT_NAME
+    INNER JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS PK ON C.UNIQUE_CONSTRAINT_NAME = PK.CONSTRAINT_NAME
+    INNER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE CU ON C.CONSTRAINT_NAME = CU.CONSTRAINT_NAME
+    INNER JOIN
+        (	
+            SELECT i1.TABLE_NAME, i2.COLUMN_NAME
+            FROM  INFORMATION_SCHEMA.TABLE_CONSTRAINTS i1
+            INNER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE i2 ON i1.CONSTRAINT_NAME = i2.CONSTRAINT_NAME
+            WHERE i1.CONSTRAINT_TYPE = 'PRIMARY KEY'
+        ) 
+    PT ON PT.TABLE_NAME = PK.TABLE_NAME
+    WHERE FK.Table_NAME=@tableName OR PK.Table_NAME=@tableName";
+
+const string TABLE_SQL=@"SELECT *
+    FROM  INFORMATION_SCHEMA.TABLES
+    WHERE TABLE_TYPE='BASE TABLE'";
+
+const string COLUMN_SQL=@"SELECT 
+        TABLE_CATALOG AS [Database],
+        TABLE_SCHEMA AS Owner, 
+        TABLE_NAME AS TableName, 
+        COLUMN_NAME AS ColumnName, 
+        ORDINAL_POSITION AS OrdinalPosition, 
+        COLUMN_DEFAULT AS DefaultSetting, 
+        IS_NULLABLE AS IsNullable, DATA_TYPE AS DataType, 
+        CHARACTER_MAXIMUM_LENGTH AS MaxLength, 
+        DATETIME_PRECISION AS DatePrecision,
+        NUMERIC_PRECISION AS NumericPrecision,
+        NUMERIC_SCALE AS NumericScale,
+        COLUMNPROPERTY(object_id('[' + TABLE_SCHEMA + '].[' + TABLE_NAME + ']'), COLUMN_NAME, 'IsIdentity') AS IsIdentity,
+        COLUMNPROPERTY(object_id('[' + TABLE_SCHEMA + '].[' + TABLE_NAME + ']'), COLUMN_NAME, 'IsComputed') as IsComputed
+    FROM  INFORMATION_SCHEMA.COLUMNS
+    WHERE TABLE_NAME=@tablename
+    ORDER BY OrdinalPosition ASC";
+  
+	const string INXSql = @"
+		select 
+			Name = i.name,
+			Schema_Name = s.name,
+			Table_Name = t.name,
+			Is_Unique = i.is_unique,
+			Is_Clustered = cast((case when i.type = 1 then 1 else 0 end) as bit),
+			Ordinal = ic.key_ordinal,
+			Column_Name = c.name,
+			Is_Descending = ic.is_descending_key
+		from sys.indexes i
+		inner join sys.index_columns ic on  i.object_id = ic.object_id and i.index_id = ic.index_id 
+		inner join sys.columns c on ic.object_id = c.object_id and ic.column_id = c.column_id 
+		inner join sys.tables t on i.object_id = t.object_id 
+		inner join sys.schemas s on t.schema_id = s.schema_id
+		where i.type in (1,2) -- clustered, nonclustered
+		and t.name=@tablename
+		and i.is_primary_key = 0
+		and i.is_unique_constraint = 0
+		and i.is_disabled = 0
+		and i.is_hypothetical = 0
+		and t.is_ms_shipped = 0 
+		and ic.is_included_column = 0
+		order by Schema_Name, Name, Ordinal
+	";
+
+  
+List<SPParam> GetSPParams(string spName)
+{
+    var result = new List<SPParam>();
+    string[] restrictions = new string[4] { DatabaseName, null, spName, null };
+    using(SqlConnection conn = new SqlConnection(ConnectionString))
+	{
+        conn.Open();
+		var sprocs = conn.GetSchema("ProcedureParameters", restrictions);
+		conn.Close();
+
+		foreach(DataRow row in sprocs.Select(string.Empty, "ORDINAL_POSITION"))
+		{
+		    SPParam p = new SPParam();
+			p.SysType = GetSysType(row["DATA_TYPE"].ToString());
+			p.DbType = GetDbType(row["DATA_TYPE"].ToString()).ToString();
+			p.Name = row["PARAMETER_NAME"].ToString().Replace("@", string.Empty);
+			p.CleanName = CleanUp(p.Name);
+			result.Add(p);
+		}
+	}
+	return result;
+}
+
+List<SP> GetSPs()
+{
+    var result = new List<SP>();
+    //pull the SPs
+    
+    DataTable sprocs = null;
+    DataTable parameters = null;
+    
+    using(SqlConnection conn = new SqlConnection(ConnectionString))
+	{
+        conn.Open();
+		sprocs = conn.GetSchema("Procedures");
+		conn.Close();
+	}
+	
+    foreach(DataRow row in sprocs.Rows)
+	{
+	    string spType = row["ROUTINE_TYPE"].ToString();
+        var sp = new SP();
+	    sp.Name = row["ROUTINE_NAME"].ToString();
+	    
+        if(spType == "PROCEDURE" & !sp.Name.StartsWith("sp_"))
+		{
+    	    sp.CleanName = CleanUp(sp.Name);
+            sp.Parameters = GetSPParams(sp.Name);
+            result.Add(sp);        
+        }
+    }
+    return result;
+}
+   
+   
+List<Table> LoadTables()
+{
+    var result = new List<Table>();
+    //pull the tables in a reader
+    using(IDataReader rdr=GetReader(TABLE_SQL))
+	{
+        while(rdr.Read())
+		{
+            Table tbl = new Table();
+            tbl.Name = rdr["TABLE_NAME"].ToString();
+            tbl.Schema = rdr["TABLE_SCHEMA"].ToString();
+            tbl.Columns = LoadColumns(tbl);
+            //tbl.PrimaryKey = GetPK(tbl.Name);
+            tbl.CleanName = tbl.Name;
+            tbl.ClassName = tbl.CleanName;
+            tbl.QueryableName = tbl.ClassName;
+			tbl.PKs = LoadPKs(tbl.Name);
+            
+            //set the PK for the columns
+            //var pkColumn = tbl.Columns.SingleOrDefault(x => x.Name.ToLower().Trim() == tbl.PrimaryKey.ToLower().Trim());
+            //if(pkColumn != null)
+                //pkColumn.IsPK = true;
+
+            tbl.FKTables = LoadFKTables(tbl.Name);
+            tbl.Indexes = LoadIndexes(tbl.Name);
+            result.Add(tbl);
+        }
+    }
+
+    foreach(Table tbl in result)
+	{
+        //loop the FK tables and see if there's a match for our FK columns
+        foreach(Column col in tbl.Columns)
+		{
+            col.IsPK=tbl.PKs.Any(x => x.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase));
+            col.IsForeignKey=tbl.FKTables.Any(x => x.ThisColumn.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase) && 
+                                                   x.ThisTable.Equals(tbl.ClassName, StringComparison.InvariantCultureIgnoreCase));
+            if(col.IsForeignKey)
+            {
+                col.FKTableName = tbl.FKTables.Where(x => x.ThisColumn.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase) && 
+                                                     x.ThisTable.Equals(tbl.ClassName, StringComparison.InvariantCultureIgnoreCase))
+                                                    .Select(x=>x.OtherTable).Take(1).SingleOrDefault();
+            }
+        }
+    }
+    return result;
+}
+
+Table LoadTable(string tableName)
+{
+    var result = new Table();
+    //pull the tables in a reader
+    string sTABLE_SQL = TABLE_SQL + " and TABLE_NAME = '" + tableName +"'";
+    using(IDataReader rdr=GetReader(sTABLE_SQL))
+	{
+        //while(rdr.Read())
+		//{
+            rdr.Read();
+            //Table tbl = new Table();
+            result.Name = rdr["TABLE_NAME"].ToString();
+            result.Schema = rdr["TABLE_SCHEMA"].ToString();
+            result.Columns = LoadColumns(result);
+            //tbl.PrimaryKey = GetPK(tbl.Name);
+            result.CleanName = result.Name;
+            result.ClassName = result.CleanName;
+            result.QueryableName = result.ClassName;
+			result.PKs = LoadPKs(result.Name);
+            
+            //set the PK for the columns
+            //var pkColumn = tbl.Columns.SingleOrDefault(x => x.Name.ToLower().Trim() == tbl.PrimaryKey.ToLower().Trim());
+            //if(pkColumn != null)
+                //pkColumn.IsPK = true;
+
+            result.FKTables = LoadFKTables(result.Name);
+            //result.Add(tbl);
+        //}
+    }
+
+    //foreach(Table tbl in result)
+	//{
+        ////loop the FK tables and see if there's a match for our FK columns
+        foreach(Column col in result.Columns)
+		{
+            col.IsPK=result.PKs.Any(x => x.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase));
+            col.IsForeignKey=result.FKTables.Any(x => x.ThisColumn.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase) && 
+                                                   x.ThisTable.Equals(result.ClassName, StringComparison.InvariantCultureIgnoreCase));
+            if(col.IsForeignKey)
+            {
+                col.FKTableName = result.FKTables.Where(x => x.ThisColumn.Equals(col.CleanName, StringComparison.InvariantCultureIgnoreCase) && 
+                                                     x.ThisTable.Equals(result.ClassName, StringComparison.InvariantCultureIgnoreCase))
+                                                    .Select(x=>x.OtherTable).Take(1).SingleOrDefault();
+            }
+        }
+    //}
+    return result;
+}
+
+List<Column> LoadColumns(Table tbl)
+{
+    var result = new List<Column>();
+    var cmd = GetCommand(COLUMN_SQL);
+    cmd.Parameters.AddWithValue("@tableName", tbl.Name);
+
+    using(IDataReader rdr=cmd.ExecuteReader(CommandBehavior.CloseConnection))
+	{
+        while(rdr.Read())
+		{
+            Column col = new Column();
+            col.Name = rdr["ColumnName"].ToString();
+            col.CleanName = col.Name;
+            col.DataType = rdr["DataType"].ToString();
+            col.SysType = GetSysType(col.DataType);
+            col.DbType = GetDbType(col.DataType);
+            col.AutoIncrement = rdr["IsIdentity"].ToString() == "1";
+            col.IsNullable = rdr["IsNullable"].ToString() == "YES";
+			col.DefaultSetting = rdr["DefaultSetting"];
+            Int32.TryParse(rdr["OrdinalPosition"].ToString(), out col.OrdinalPosition);
+            Int32.TryParse(rdr["MaxLength"].ToString(), out col.MaxLength);
+            Int32.TryParse(rdr["NumericPrecision"].ToString(), out col.Precision);
+			Int32.TryParse(rdr["NumericScale"].ToString(), out col.Scale);
+            result.Add(col);
+        }
+
+    }
+    return result;
+}
+
+List<FKTable> LoadFKTables(string tableName)
+{
+    //this is a "bi-directional" scheme
+    //which pulls both 1-many and many-1
+
+    var result = new List<FKTable>();
+    var cmd = GetCommand(FKSql);
+    cmd.Parameters.AddWithValue("@tableName", tableName);
+    using(IDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+	{
+        while(rdr.Read())
+		{
+            FKTable fk = new FKTable();
+
+            string thisTable = rdr["ThisTable"].ToString();
+            fk.ThisTable = rdr["ThisTable"].ToString();
+            fk.ThisColumn = rdr["ThisColumn"].ToString();
+            fk.OtherTable = rdr["OtherTable"].ToString();
+            fk.OtherColumn = rdr["OtherColumn"].ToString();
+			fk.OtherClass = fk.OtherTable;
+            fk.OtherQueryable = fk.OtherClass;
+
+			var thisTableCount = result.Where(x=>x.ThisTable.Equals(fk.ThisTable)).Count();
+			var otherTableCount = result.Where(x=>x.OtherTable.Equals(fk.OtherTable)).Count();
+
+			if(thisTableCount > 0)
+				fk.ThisTablePropertyName = fk.ThisTable + thisTableCount;
+			else 
+				fk.ThisTablePropertyName = fk.ThisTable;
+
+			if(fk.ThisTable==fk.OtherTable)
+				otherTableCount=otherTableCount+1;
+			if(otherTableCount > 0)
+				fk.OtherTablePropertyName = fk.OtherTable + otherTableCount;
+			else 				
+				fk.OtherTablePropertyName = fk.OtherTable;
+            result.Add(fk);
+        }
+    }
+    return result;
+}
+//Modify by TVTUU
+List<Index> LoadIndexes(string tableName)
+{
+    //this is a "load index in table
+
+    var result = new List<Index>();
+    var cmd = GetCommand(INXSql);
+    cmd.Parameters.AddWithValue("@tableName", tableName);
+    using(IDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+	{
+        while(rdr.Read())
+		{
+            Index idx = new Index();
+
+            idx.Name = rdr["Name"].ToString();
+            idx.Schema_Name = rdr["Schema_Name"].ToString();
+            idx.Table_Name = rdr["Table_Name"].ToString();
+            idx.IsUnique = rdr["Is_Unique"].ToString() == "1";
+            idx.IsClustered = rdr["Is_Clustered"].ToString() == "1";
+            idx.Ordinal = (byte)rdr["Ordinal"];
+            idx.Column_Name = rdr["Column_Name"].ToString();
+            idx.IsDescending = rdr["Is_Descending"].ToString() == "1";
+
+            result.Add(idx);
+        }
+    }
+    return result;
+}
+
+List<string> LoadPKs(string table)
+{
+	var result = new List<string>();
+	string sql = @"SELECT KCU.COLUMN_NAME 
+        FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE KCU
+        JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS TC
+        ON KCU.CONSTRAINT_NAME=TC.CONSTRAINT_NAME
+        WHERE TC.CONSTRAINT_TYPE='PRIMARY KEY'
+		AND KCU.TABLE_NAME=@tableName";
+
+    var cmd = GetCommand(sql);
+    cmd.Parameters.AddWithValue("@tableName", table);
+	SqlDataReader rdr = cmd.ExecuteReader();
+		while(rdr.Read())
+		{
+			result.Add(rdr.GetString(0));
+		}
+
+
+	return result;
+}
+
+string GetPK(string table){
+	
+	string pk = string.Empty;
+	DataTable pkTable = new DataTable();
+    string sql = @"SELECT KCU.COLUMN_NAME 
+        FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE KCU
+        JOIN INFORMATION_SCHEMA.TABLE_CONSTRAINTS TC
+        ON KCU.CONSTRAINT_NAME=TC.CONSTRAINT_NAME
+        WHERE TC.CONSTRAINT_TYPE='PRIMARY KEY'
+		AND KCU.TABLE_NAME=@tableName";
+
+    var cmd = GetCommand(sql);
+    cmd.Parameters.AddWithValue("@tableName", table);
+    var result = cmd.ExecuteScalar();
+    cmd.Dispose();
+    if(result != null)
+        pk = result.ToString();    
+
+	return pk;
+}
+
+string GetSysType(string sqlType){
+	string sysType="string";
+	switch (sqlType) 
+	{
+		case "bigint":
+			sysType = "long";
+			break;
+		case "smallint":
+			sysType = "short";
+			break;
+		case "int":
+			sysType = "int";
+			break;
+		case "uniqueidentifier":
+			sysType = "Guid";
+			break;
+		case "smalldatetime":
+		case "datetime":
+		case "date":		
+			sysType = "DateTime";
+			break;
+		case "time":
+			sysType = "TimeSpan";
+			break;
+		case "float":
+			sysType = "double";
+			break;
+		case "real":
+		case "numeric":
+		case "smallmoney":
+		case "decimal":
+		case "money":
+			sysType = "decimal";
+			break;
+		case "tinyint":
+			sysType = "byte";
+			break;
+		case "bit":
+			sysType = "bool";
+			break;
+		case "image":
+		case "binary":
+		case "varbinary":
+			sysType = "byte[]";
+			break;
+	}
+	return sysType;
+}
+
+DbType GetDbType(string sqlType)
+{
+	switch(sqlType)
+    {
+        case "varchar":
+            return DbType.AnsiString;
+        case "nvarchar":
+            return DbType.String;
+        case "int":
+            return DbType.Int32;
+        case "uniqueidentifier":
+            return DbType.Guid;
+		case "time":
+			return DbType.Time;
+        case "datetime":
+            return DbType.DateTime;
+        case "bigint":
+            return DbType.Int64;
+        case "binary":
+            return DbType.Binary;
+        case "bit":
+            return DbType.Boolean;
+        case "char":
+            return DbType.AnsiStringFixedLength;
+        case "decimal":
+            return DbType.Decimal;
+        case "float":
+            return DbType.Double;
+        case "image":
+            return DbType.Binary;
+        case "money":
+            return DbType.Currency;
+        case "nchar":
+            return DbType.String;
+        case "ntext":
+            return DbType.String;
+        case "numeric":
+            return DbType.Decimal;
+        case "real":
+            return DbType.Single;
+        case "smalldatetime":
+            return DbType.DateTime;
+        case "smallint":
+            return DbType.Int16;
+        case "smallmoney":
+            return DbType.Currency;
+        case "sql_variant":
+            return DbType.String;
+        case "sysname":
+            return DbType.String;
+        case "text":
+            return DbType.AnsiString;
+        case "timestamp":
+            return DbType.Binary;
+        case "tinyint":
+            return DbType.Byte;
+        case "varbinary":
+            return DbType.Binary;
+         case "xml":
+            return DbType.Xml;
+        default:
+            return DbType.AnsiString;
+    }
+}
+
+#>

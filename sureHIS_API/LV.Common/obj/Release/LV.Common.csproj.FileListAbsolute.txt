@@ -1,0 +1,21 @@
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Common\obj\Release\LV.Common.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Common\obj\Release\LV.Common.csprojResolveAssemblyReference.cache
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Common.dll.config
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Common.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\bin\Release\LV.Common.pdb
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Common\obj\Release\LV.Common.dll
+F:\Work\HealthCareAPI - Copy\HealthCareAPI\LV.Common\obj\Release\LV.Common.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Common.dll.config
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Common.dll
+F:\Work\HealthCareAPI\HealthCareAPI\bin\Release\LV.Common.pdb
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Common\obj\Release\LV.Common.dll
+F:\Work\HealthCareAPI\HealthCareAPI\LV.Common\obj\Release\LV.Common.pdb
+F:\Work\APITeam\sureHIS_API\bin\Release\LV.Common.dll.config
+F:\Work\APITeam\sureHIS_API\bin\Release\LV.Common.dll
+F:\Work\APITeam\sureHIS_API\bin\Release\LV.Common.pdb
+F:\Work\APITeam\sureHIS_API\LV.Common\obj\Release\LV.Common.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.Common\obj\Release\LV.Common.dll
+F:\Work\APITeam\sureHIS_API\LV.Common\obj\Release\LV.Common.pdb
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Common.dll.config
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Common.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Common.pdb

@@ -1,0 +1,1 @@
+"%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration /c:"Data Source=172.16.7.57\SQLDBHIS; Initial Catalog=HealthCare;persist security info=True;user id=hcdev;password=hcdev@123;MultipleActiveResultSets=True;" /project:SureHis /entitycontainer:SureHisEntities /namespace:SureHisModel /language:CSharp

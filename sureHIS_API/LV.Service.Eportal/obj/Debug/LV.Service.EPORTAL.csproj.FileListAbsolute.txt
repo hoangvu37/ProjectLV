@@ -1,0 +1,6 @@
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.Eportal.dll.config
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.Eportal.dll
+F:\Work\APITeam\sureHIS_API\HealthCareAPI\bin\LV.Service.Eportal.pdb
+F:\Work\APITeam\sureHIS_API\LV.Service.Eportal\obj\Debug\LV.Service.EPORTAL.csprojResolveAssemblyReference.cache
+F:\Work\APITeam\sureHIS_API\LV.Service.Eportal\obj\Debug\LV.Service.Eportal.dll
+F:\Work\APITeam\sureHIS_API\LV.Service.Eportal\obj\Debug\LV.Service.Eportal.pdb
